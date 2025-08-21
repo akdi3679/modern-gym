@@ -1,0 +1,1708 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<script data-dojo-config="async: 1" src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gamoun Center</title>
+ <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+<!-- Add this right after opening <body> tag -->
+<div id="loading-screen">
+  <div class="svg-container">
+   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="260" height="200" viewBox="0 0 530 599"> 
+        <!-- White background -->
+        <rect width="100%" height="100%" />
+        
+        <!-- Left decoration with filter -->
+        <g id="left-decoration" opacity="0" transform="translate(206 275) scale(-0.1,0.1) rotate(0)" 
+           filter="url(#decor-filter)">
+            <path d="M200 200c15 3 33 15 45 39l-32 95c-39 77-94 86-156 99-70 15-80 19-92 13l-20-9-10-6c-8-4-12-8-10-17-26-25-14-38-5-75 12-53 10-72 40-94 33-65 93-81 125-81 52-2 38 17 76 16z" 
+                  fill="#FFFF00" stroke="#FFCC00" stroke-width="2"/>
+        </g>
+        
+        <!-- Right decoration with filter -->
+        <g id="right-decoration" opacity="0" transform="translate(328 275) scale(0.1) rotate(0)"
+           filter="url(#decor-filter)">
+            <path d="M200 200c15 3 33 15 45 39l-32 95c-39 77-94 86-156 99-70 15-80 19-92 13l-20-9-10-6c-8-4-12-8-10-17-26-25-14-38-5-75 12-53 10-72 40-94 33-65 93-81 125-81 52-2 38 17 76 16z" 
+                  fill="#FFFF00" stroke="#FFCC00" stroke-width="2"/>
+        </g>
+        
+        <!-- Filter for brightness effects -->
+        <defs>
+            <filter id="decor-filter" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="0.5" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                <feComponentTransfer>
+                    <feFuncR type="linear" slope="1.5"/>
+                    <feFuncG type="linear" slope="1.5"/>
+                    <feFuncB type="linear" slope="1.5"/>
+                </feComponentTransfer>
+            </filter>
+        </defs>
+        
+        <!-- Main content -->
+        <g transform="translate(0.000000,599.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <!-- Main content -->
+   
+                <!-- Path 1 (will be morphed) -->
+                <path fill="#ffffff" id="path1" d="M2273 3278 c-22 -25 -43 -99 -43 -145 0 -25 9 -81 21 -126 25 -96 27 -163 7 -201 l-14 -27 -43 86 c-83 162 -157 222 -293 234 -123 11 -160 37 -208 143 l-20 43 0 -53 c0 -58 16 -103 60 -173 17 -25 38 -70 49 -101 27 -77 45 -109 82 -146 39 -38 111 -62 186 -62 30 0 62 -4 72 -10 45 -23 53 -101 41 -407 -3 -90 -1 -136 6 -143 8 -8 13 5 18 52 4 35 32 137 61 228 30 91 58 179 62 195 6 25 8 20 11 -32 2 -35 7 -63 11 -63 22 0 55 108 59 195 4 80 1 100 -23 165 -55 152 -76 227 -83 294 -6 57 -9 67 -19 54z m-335 -260 c7 -7 12 -22 12 -34 0 -31 37 -74 65 -74 13 0 36 5 52 11 25 9 31 7 51 -16 13 -15 21 -32 19 -39 -5 -16 -87 -56 -116 -56 -40 0 -109 39 -130 73 -19 32 -24 56 -22 115 1 28 4 32 29 32 15 0 33 -5 40 -12z"/>
+                
+                <!-- Path 2 (will be morphed) -->
+                <path fill="#ffffff" id="path2" d="M3050 3235 c0 -83 -18 -147 -86 -305 -39 -92 -39 -178 0 -282 15 -43 32 -78 37 -78 5 0 9 21 10 48 l1 47 13 -40 c7 -22 35 -101 63 -175 28 -74 54 -159 58 -187 3 -29 10 -53 15 -53 18 0 20 75 5 236 -24 259 -10 289 140 306 99 12 152 34 183 76 11 16 54 101 96 189 67 142 76 167 73 210 l-3 48 -28 -58 c-42 -85 -76 -107 -187 -117 -144 -14 -174 -37 -286 -223 -55 -93 -59 -96 -71 -75 -19 34 -16 120 8 211 27 104 22 182 -14 252 l-26 50 -1 -80z m408 -217 c17 -17 15 -93 -3 -128 -16 -31 -64 -64 -108 -74 -34 -8 -97 8 -128 32 -22 19 -22 19 -3 51 14 24 24 31 39 26 64 -19 86 -18 110 5 14 13 25 34 25 46 0 12 3 29 6 38 7 19 45 21 62 4z"/>
+                
+                <!-- Include all other paths from your original SVG -->
+                <path fill="#ffffff" d="M1205 4737 c-16 -12 -11 -15 43 -20 115 -12 224 -69 321 -168 37 -38 51 -59 51 -80 0 -25 -4 -29 -26 -29 -15 0 -48 16 -75 35 l-48 36 9 -32 c17 -57 33 -77 125 -154 77 -64 84 -74 85 -111 0 -36 -14 -50 -131 -127 -47 -31 -92 -63 -99 -72 -12 -14 -11 -16 11 -10 13 3 65 14 116 25 134 28 176 54 318 194 69 67 125 125 125 128 0 4 -15 10 -32 13 -54 12 -118 49 -223 130 -150 116 -304 217 -360 237 -61 21 -183 24 -210 5z"/>
+                <path fill="#ffffff" d="M3943 4735 c-103 -28 -213 -96 -360 -223 -100 -86 -171 -131 -229 -146 -25 -6 -44 -16 -43 -21 1 -6 57 -63 126 -128 90 -86 140 -126 186 -148 34 -16 68 -29 75 -29 7 0 56 -14 108 -31 52 -18 98 -29 102 -25 9 10 -50 58 -122 98 -86 49 -136 95 -136 127 1 41 21 68 101 135 68 57 130 139 115 153 -3 4 -25 -7 -49 -24 -45 -32 -79 -44 -94 -34 -18 12 7 69 52 119 52 57 192 132 285 152 81 17 89 21 60 30 -40 13 -121 10 -177 -5z"/>
+                <path fill="#ffffff" d="M2190 4563 c-102 -26 -248 -103 -195 -103 9 0 61 12 114 26 88 24 104 26 196 18 55 -4 138 -8 184 -9 76 -1 85 -3 102 -26 51 -66 2 -96 -241 -145 -122 -24 -215 -59 -240 -89 -21 -25 -4 -28 38 -6 51 26 135 39 307 45 117 5 144 4 163 -10 41 -28 21 -89 -41 -121 -26 -13 -66 -16 -217 -17 -183 -1 -186 -1 -243 -30 -54 -27 -163 -114 -154 -122 2 -3 37 11 78 31 106 50 163 59 257 39 42 -9 111 -15 152 -14 103 4 105 3 139 -26 35 -29 40 -66 15 -102 -27 -38 -61 -45 -225 -46 l-156 -1 -84 -42 c-78 -38 -186 -119 -175 -130 2 -3 26 5 53 17 118 54 122 54 278 55 83 1 177 5 211 9 59 8 62 8 97 -23 44 -39 52 -61 37 -106 -16 -47 -39 -57 -139 -60 -47 -1 -99 -8 -116 -16 -43 -20 -135 -81 -135 -89 0 -5 30 3 68 16 85 30 181 31 277 4 72 -21 94 -20 173 6 67 22 167 18 250 -10 40 -14 72 -22 72 -18 0 4 -26 25 -57 45 -73 48 -151 71 -216 64 -62 -8 -101 11 -116 54 -16 46 -14 55 20 93 41 47 81 54 174 31 65 -17 81 -17 143 -5 95 18 153 10 247 -35 44 -20 85 -39 90 -42 6 -2 -15 19 -45 49 -113 108 -215 142 -391 133 -106 -6 -120 -5 -157 14 -64 33 -81 86 -41 130 33 36 65 43 130 30 48 -9 71 -9 130 5 115 26 170 21 274 -24 49 -21 92 -36 95 -33 6 6 -61 65 -110 97 -72 47 -122 56 -302 56 -180 0 -210 6 -242 52 -23 33 -20 65 8 84 22 14 46 14 204 6 157 -9 187 -13 246 -37 37 -15 69 -25 72 -23 2 3 -6 14 -19 25 -23 22 -97 47 -337 113 -79 22 -148 46 -152 53 -5 6 -6 23 -2 37 11 48 27 55 142 57 59 1 148 4 198 8 85 6 97 5 180 -24 127 -43 135 -23 15 38 -101 52 -106 53 -581 55 -355 3 -457 0 -500 -11z"/>
+                <path fill="#ffffff" d="M1070 4465 c-20 -42 -24 -66 -24 -147 l-1 -97 58 -110 c31 -61 57 -124 57 -140 0 -16 -11 -59 -25 -96 -14 -37 -24 -72 -23 -76 2 -5 55 27 118 71 63 44 114 82 113 85 -1 4 -27 27 -58 52 -30 25 -73 72 -94 104 -64 95 -83 158 -90 289 l-7 115 -24 -50z"/>
+                <path fill="#ffffff" d="M4241 4425 c-1 -180 -65 -320 -196 -428 l-55 -45 104 -71 c144 -98 140 -97 110 -9 -32 94 -28 133 25 223 60 101 74 153 69 244 -3 56 -12 89 -31 126 l-25 50 -1 -90z"/>
+                <path fill="#ffffff" d="M4140 3734 c8 -10 43 -49 78 -85 76 -80 106 -119 137 -179 25 -48 60 -159 53 -166 -3 -2 -44 10 -92 27 -48 17 -90 28 -93 25 -3 -3 16 -33 42 -68 95 -126 199 -328 251 -488 26 -79 38 -63 31 43 -6 101 -34 212 -74 291 l-25 49 39 -7 c21 -3 48 -9 61 -12 22 -6 23 -5 17 32 -12 75 -47 180 -83 249 -42 82 -207 255 -244 255 -12 0 -42 12 -67 27 -37 21 -43 23 -31 7z"/>
+                <path fill="#ffffff" d="M1160 3715 c-19 -14 -46 -25 -60 -25 -19 0 -46 -19 -98 -72 -148 -152 -214 -271 -224 -408 -3 -49 -5 -49 66 -35 45 9 45 12 0 -95 -34 -82 -59 -224 -49 -287 l7 -47 58 142 c64 156 104 233 191 368 33 50 59 94 59 98 0 10 -49 -4 -113 -32 -31 -14 -60 -22 -64 -18 -11 11 34 137 73 202 35 59 70 103 157 192 47 48 46 51 -3 17z"/>
+                <path fill="#ffffff" d="M1690 3666 c-252 -93 -524 -371 -594 -605 -17 -58 -21 -101 -8 -101 4 1 29 38 55 83 26 46 72 110 101 142 l53 59 7 -119 c10 -167 32 -242 51 -167 18 71 90 236 140 317 30 50 55 94 55 98 0 13 -64 -27 -119 -73 -26 -22 -50 -40 -54 -40 -11 0 32 101 65 152 42 66 134 148 233 209 47 29 85 54 85 56 0 7 -36 1 -70 -11z"/>
+                <path fill="#ffffff" d="M3590 3676 c0 -1 48 -37 108 -79 111 -78 194 -157 230 -217 21 -37 45 -111 37 -118 -2 -3 -41 23 -86 57 -46 33 -84 59 -86 57 -2 -2 17 -36 42 -75 56 -87 77 -133 126 -276 35 -102 38 -108 48 -83 13 35 31 176 31 246 0 38 4 52 12 50 11 -4 49 -55 184 -242 40 -57 20 66 -27 158 -99 195 -356 444 -527 510 -38 14 -92 22 -92 12z"/>
+                <path fill="#ffffff" d="M3767 3230 c-3 -8 -8 -50 -11 -92 -11 -145 -13 -153 -81 -226 -34 -37 -77 -92 -97 -122 -32 -51 -58 -77 -139 -139 -43 -33 -89 -135 -96 -211 -3 -33 -2 -60 3 -60 5 0 23 31 39 68 29 65 78 132 96 132 5 0 30 10 55 22 34 16 60 40 99 92 29 39 79 96 112 126 33 30 65 64 71 75 10 19 11 18 17 -8 11 -42 -3 -124 -30 -177 -27 -53 -83 -105 -150 -141 -25 -13 -45 -28 -45 -32 0 -14 74 4 135 33 33 16 60 28 61 27 9 -9 -32 -88 -57 -111 -32 -28 -33 -29 -126 -23 -51 3 -93 4 -93 2 0 -4 204 -116 233 -128 26 -10 68 37 112 127 43 87 62 161 71 270 6 75 4 88 -14 118 -11 18 -28 62 -38 98 -33 121 -118 308 -127 280z"/>
+                <path fill="#ffffff"  d="M1518 3132 c-26 -53 -58 -134 -73 -179 -15 -46 -31 -85 -36 -88 -14 -10 -10 -169 7 -253 16 -82 67 -198 106 -246 21 -25 29 -28 59 -22 19 3 70 27 113 54 84 50 110 79 59 66 -15 -5 -51 -8 -80 -8 -44 0 -57 4 -82 29 -28 26 -59 91 -49 101 3 2 31 -7 62 -22 53 -24 136 -43 136 -31 0 2 -28 23 -62 46 -77 50 -133 102 -154 143 -9 18 -18 66 -20 112 -5 80 -5 81 13 56 22 -31 49 -57 96 -93 20 -15 60 -59 89 -97 42 -58 63 -76 112 -99 75 -36 105 -67 141 -151 40 -93 49 -97 42 -19 -10 112 -47 185 -123 243 -25 19 -64 58 -86 88 -23 29 -70 85 -103 123 -34 39 -67 80 -74 93 -7 12 -19 73 -27 134 -8 62 -16 113 -17 115 -2 2 -24 -41 -49 -95z"/>
+                <path fill="#ffffff"  d="M2332 2249 c-11 -31 -37 -88 -56 -127 -73 -143 -74 -292 -3 -364 17 -16 58 -42 91 -58 34 -16 86 -52 116 -79 30 -27 75 -64 99 -83 25 -18 48 -45 53 -60 11 -34 -4 -96 -34 -133 -36 -46 -293 -155 -365 -155 -34 0 -123 45 -123 62 0 4 32 17 70 29 39 13 70 26 70 31 0 15 -74 20 -126 9 -67 -15 -110 -7 -130 25 -32 47 -18 53 138 56 l143 3 -40 21 c-29 16 -72 25 -158 33 -75 6 -128 16 -146 27 -34 20 -61 63 -61 96 l0 25 61 -30 c54 -28 73 -31 192 -37 73 -4 133 -6 135 -5 11 9 -94 55 -157 69 -129 28 -221 96 -221 163 0 17 31 83 76 163 42 74 83 152 90 174 16 43 19 100 5 92 -24 -15 -179 -282 -210 -361 -33 -83 -35 -98 -35 -200 0 -88 4 -123 22 -174 12 -35 20 -66 17 -69 -2 -3 -22 13 -44 34 -56 57 -65 98 -58 289 l5 160 -40 -85 c-34 -70 -42 -82 -49 -65 -17 43 -9 130 21 225 35 111 33 100 18 100 -7 0 -36 -24 -66 -52 -61 -61 -72 -57 -72 27 1 66 15 128 46 188 13 27 24 50 24 52 0 2 -13 -1 -30 -6 -36 -13 -98 -83 -131 -147 -31 -62 -38 -176 -15 -258 66 -232 219 -475 364 -577 119 -84 178 -155 211 -259 7 -20 20 -40 30 -43 9 -3 39 -48 66 -101 27 -54 66 -113 88 -135 45 -43 87 -53 87 -19 0 23 3 23 93 6 47 -9 67 -10 64 -2 -2 6 -48 47 -101 91 -92 74 -99 78 -112 61 -13 -18 -14 -17 -25 10 -21 53 -16 145 12 193 23 41 32 47 159 100 74 32 160 69 190 83 30 14 64 28 75 31 13 4 91 -25 230 -86 l210 -92 11 -46 c18 -73 26 -182 14 -199 -9 -13 -12 -13 -25 4 -17 22 -5 29 -138 -83 -48 -40 -87 -75 -85 -76 2 -2 32 3 68 10 88 19 100 19 100 -4 0 -33 18 -34 64 -1 41 30 93 107 142 213 10 21 25 37 34 37 11 0 21 15 29 43 32 106 98 187 226 274 75 52 141 131 219 263 145 245 179 423 108 573 -35 76 -77 127 -104 127 -10 0 -28 5 -39 10 -25 14 -24 2 4 -40 39 -58 57 -117 57 -183 0 -96 -9 -100 -74 -39 -30 29 -60 52 -65 52 -14 0 -15 9 14 -85 29 -92 40 -187 27 -230 -10 -30 -10 -29 -49 53 -21 46 -41 81 -44 78 -3 -3 1 -47 9 -98 16 -105 6 -231 -24 -293 -15 -31 -70 -83 -78 -74 -2 2 7 47 20 99 13 52 24 116 24 141 0 57 -32 185 -65 257 -37 82 -189 309 -193 289 -7 -36 32 -135 104 -262 87 -155 90 -175 37 -229 -49 -49 -97 -73 -186 -93 -73 -16 -140 -44 -152 -63 -4 -7 23 -8 82 -5 160 10 193 16 250 45 32 16 58 28 60 26 10 -10 -24 -80 -52 -105 -36 -31 -38 -32 -212 -49 -62 -6 -101 -15 -120 -28 l-28 -19 135 -6 c74 -4 143 -7 153 -8 16 -1 16 -3 2 -31 -24 -47 -46 -54 -134 -39 -76 12 -143 6 -125 -10 5 -5 37 -19 72 -31 34 -13 62 -26 62 -31 0 -14 -91 -62 -119 -62 -30 0 -266 93 -329 129 -46 27 -82 85 -82 131 0 37 23 69 63 90 18 9 56 40 84 69 29 29 86 72 127 94 106 58 122 77 136 161 10 56 9 81 0 117 -17 60 -110 304 -121 317 -18 19 -9 -122 11 -181 44 -127 34 -228 -29 -305 -24 -29 -192 -165 -239 -193 -7 -4 -24 -1 -38 9 -23 15 -27 15 -43 1 -10 -9 -23 -16 -29 -16 -21 0 -233 172 -262 212 -34 47 -54 126 -47 182 3 23 18 82 32 132 20 70 24 98 17 129 l-8 40 -22 -56z"/>
+                <path fill="#ffffff" d="M4293 1884 c-6 -11 -32 -84 -58 -163 l-49 -144 -20 25 c-12 14 -35 45 -53 71 -17 25 -41 50 -52 56 -18 10 -20 7 -26 -47 -13 -113 -86 -347 -109 -347 -5 0 -18 31 -30 70 -13 38 -27 70 -32 72 -6 2 -28 -34 -49 -79 -62 -127 -110 -195 -209 -298 -111 -114 -185 -206 -259 -320 -64 -100 -151 -260 -144 -266 3 -3 30 32 62 76 77 111 178 215 315 325 128 103 165 140 204 203 14 23 30 42 35 42 8 0 6 -76 -3 -162 -1 -16 1 -28 5 -28 11 0 91 97 126 155 51 81 96 183 128 287 17 54 35 98 40 98 6 0 31 -41 55 -90 24 -50 49 -89 55 -87 16 6 62 152 79 252 17 97 21 281 7 304 -7 11 -11 10 -18 -5z"/>
+                <path fill="#ffffff" d="M1024 1803 c-4 -54 -2 -122 5 -177 12 -91 77 -310 89 -302 4 2 27 45 52 95 39 81 70 115 70 78 0 -27 64 -204 98 -272 51 -103 160 -255 182 -255 4 0 6 15 5 33 -12 116 -14 157 -6 157 5 0 20 -17 32 -37 38 -61 97 -120 220 -219 138 -110 241 -218 312 -326 29 -43 53 -74 55 -68 5 13 -85 179 -149 277 -67 104 -137 190 -238 296 -114 121 -159 182 -218 297 -26 52 -52 94 -58 94 -5 -1 -21 -37 -34 -80 l-24 -79 -25 55 c-45 101 -92 278 -92 345 0 14 -4 25 -10 25 -5 0 -37 -36 -72 -80 -40 -53 -64 -76 -68 -68 -4 7 -29 77 -56 156 -26 78 -51 142 -55 142 -4 0 -11 -39 -15 -87z"/>
+            </g>
+        </svg>
+    </div>
+</div>
+<main >  
+  <!-- Transparent Navbar -->
+   <nav class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+        <div class="hi-container" id="hicontainer">
+  <div class="hi-text">contact Hamza!</div>
+  <div class="career-text" id="copyEmailBtn">Copy Email</div>
+</div>
+        <div class="containernav" id="homeNav" >
+            <div class="logo">
+                <div class="logo-text">
+                    gamoun center
+                </div>
+                <div class="menu-icon">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 599">
+        <!-- White background -->
+        
+        <!-- Left decoration with filter -->
+       
+        
+        <!-- Filter for brightness effects -->
+        <defs>
+            <filter id="decor-filter" x="-20%" y="-20%" >
+                <feGaussianBlur stdDeviation="0.5" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                <feComponentTransfer>
+                    <feFuncR type="linear" slope="1.5"/>
+                    <feFuncG type="linear" slope="1.5"/>
+                    <feFuncB type="linear" slope="1.5"/>
+                </feComponentTransfer>
+            </filter>
+        </defs>
+        
+        <!-- Main content -->
+        <g transform="translate(0.000000,599.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <!-- Main content -->
+   
+                <!-- Path 1 (will be morphed) -->
+                <path fill="#ffffff" id="path1" d="M2273 3278 c-22 -25 -43 -99 -43 -145 0 -25 9 -81 21 -126 25 -96 27 -163 7 -201 l-14 -27 -43 86 c-83 162 -157 222 -293 234 -123 11 -160 37 -208 143 l-20 43 0 -53 c0 -58 16 -103 60 -173 17 -25 38 -70 49 -101 27 -77 45 -109 82 -146 39 -38 111 -62 186 -62 30 0 62 -4 72 -10 45 -23 53 -101 41 -407 -3 -90 -1 -136 6 -143 8 -8 13 5 18 52 4 35 32 137 61 228 30 91 58 179 62 195 6 25 8 20 11 -32 2 -35 7 -63 11 -63 22 0 55 108 59 195 4 80 1 100 -23 165 -55 152 -76 227 -83 294 -6 57 -9 67 -19 54z m-335 -260 c7 -7 12 -22 12 -34 0 -31 37 -74 65 -74 13 0 36 5 52 11 25 9 31 7 51 -16 13 -15 21 -32 19 -39 -5 -16 -87 -56 -116 -56 -40 0 -109 39 -130 73 -19 32 -24 56 -22 115 1 28 4 32 29 32 15 0 33 -5 40 -12z"/>
+                
+                <!-- Path 2 (will be morphed) -->
+                <path fill="#ffffff" id="path2" d="M3050 3235 c0 -83 -18 -147 -86 -305 -39 -92 -39 -178 0 -282 15 -43 32 -78 37 -78 5 0 9 21 10 48 l1 47 13 -40 c7 -22 35 -101 63 -175 28 -74 54 -159 58 -187 3 -29 10 -53 15 -53 18 0 20 75 5 236 -24 259 -10 289 140 306 99 12 152 34 183 76 11 16 54 101 96 189 67 142 76 167 73 210 l-3 48 -28 -58 c-42 -85 -76 -107 -187 -117 -144 -14 -174 -37 -286 -223 -55 -93 -59 -96 -71 -75 -19 34 -16 120 8 211 27 104 22 182 -14 252 l-26 50 -1 -80z m408 -217 c17 -17 15 -93 -3 -128 -16 -31 -64 -64 -108 -74 -34 -8 -97 8 -128 32 -22 19 -22 19 -3 51 14 24 24 31 39 26 64 -19 86 -18 110 5 14 13 25 34 25 46 0 12 3 29 6 38 7 19 45 21 62 4z"/>
+                
+                <!-- Include all other paths from your original SVG -->
+                <path fill="#ffffff" d="M1205 4737 c-16 -12 -11 -15 43 -20 115 -12 224 -69 321 -168 37 -38 51 -59 51 -80 0 -25 -4 -29 -26 -29 -15 0 -48 16 -75 35 l-48 36 9 -32 c17 -57 33 -77 125 -154 77 -64 84 -74 85 -111 0 -36 -14 -50 -131 -127 -47 -31 -92 -63 -99 -72 -12 -14 -11 -16 11 -10 13 3 65 14 116 25 134 28 176 54 318 194 69 67 125 125 125 128 0 4 -15 10 -32 13 -54 12 -118 49 -223 130 -150 116 -304 217 -360 237 -61 21 -183 24 -210 5z"/>
+                <path fill="#ffffff" d="M3943 4735 c-103 -28 -213 -96 -360 -223 -100 -86 -171 -131 -229 -146 -25 -6 -44 -16 -43 -21 1 -6 57 -63 126 -128 90 -86 140 -126 186 -148 34 -16 68 -29 75 -29 7 0 56 -14 108 -31 52 -18 98 -29 102 -25 9 10 -50 58 -122 98 -86 49 -136 95 -136 127 1 41 21 68 101 135 68 57 130 139 115 153 -3 4 -25 -7 -49 -24 -45 -32 -79 -44 -94 -34 -18 12 7 69 52 119 52 57 192 132 285 152 81 17 89 21 60 30 -40 13 -121 10 -177 -5z"/>
+                <path fill="#ffffff" d="M2190 4563 c-102 -26 -248 -103 -195 -103 9 0 61 12 114 26 88 24 104 26 196 18 55 -4 138 -8 184 -9 76 -1 85 -3 102 -26 51 -66 2 -96 -241 -145 -122 -24 -215 -59 -240 -89 -21 -25 -4 -28 38 -6 51 26 135 39 307 45 117 5 144 4 163 -10 41 -28 21 -89 -41 -121 -26 -13 -66 -16 -217 -17 -183 -1 -186 -1 -243 -30 -54 -27 -163 -114 -154 -122 2 -3 37 11 78 31 106 50 163 59 257 39 42 -9 111 -15 152 -14 103 4 105 3 139 -26 35 -29 40 -66 15 -102 -27 -38 -61 -45 -225 -46 l-156 -1 -84 -42 c-78 -38 -186 -119 -175 -130 2 -3 26 5 53 17 118 54 122 54 278 55 83 1 177 5 211 9 59 8 62 8 97 -23 44 -39 52 -61 37 -106 -16 -47 -39 -57 -139 -60 -47 -1 -99 -8 -116 -16 -43 -20 -135 -81 -135 -89 0 -5 30 3 68 16 85 30 181 31 277 4 72 -21 94 -20 173 6 67 22 167 18 250 -10 40 -14 72 -22 72 -18 0 4 -26 25 -57 45 -73 48 -151 71 -216 64 -62 -8 -101 11 -116 54 -16 46 -14 55 20 93 41 47 81 54 174 31 65 -17 81 -17 143 -5 95 18 153 10 247 -35 44 -20 85 -39 90 -42 6 -2 -15 19 -45 49 -113 108 -215 142 -391 133 -106 -6 -120 -5 -157 14 -64 33 -81 86 -41 130 33 36 65 43 130 30 48 -9 71 -9 130 5 115 26 170 21 274 -24 49 -21 92 -36 95 -33 6 6 -61 65 -110 97 -72 47 -122 56 -302 56 -180 0 -210 6 -242 52 -23 33 -20 65 8 84 22 14 46 14 204 6 157 -9 187 -13 246 -37 37 -15 69 -25 72 -23 2 3 -6 14 -19 25 -23 22 -97 47 -337 113 -79 22 -148 46 -152 53 -5 6 -6 23 -2 37 11 48 27 55 142 57 59 1 148 4 198 8 85 6 97 5 180 -24 127 -43 135 -23 15 38 -101 52 -106 53 -581 55 -355 3 -457 0 -500 -11z"/>
+                <path fill="#ffffff" d="M1070 4465 c-20 -42 -24 -66 -24 -147 l-1 -97 58 -110 c31 -61 57 -124 57 -140 0 -16 -11 -59 -25 -96 -14 -37 -24 -72 -23 -76 2 -5 55 27 118 71 63 44 114 82 113 85 -1 4 -27 27 -58 52 -30 25 -73 72 -94 104 -64 95 -83 158 -90 289 l-7 115 -24 -50z"/>
+                <path fill="#ffffff" d="M4241 4425 c-1 -180 -65 -320 -196 -428 l-55 -45 104 -71 c144 -98 140 -97 110 -9 -32 94 -28 133 25 223 60 101 74 153 69 244 -3 56 -12 89 -31 126 l-25 50 -1 -90z"/>
+                <path fill="#ffffff" d="M4140 3734 c8 -10 43 -49 78 -85 76 -80 106 -119 137 -179 25 -48 60 -159 53 -166 -3 -2 -44 10 -92 27 -48 17 -90 28 -93 25 -3 -3 16 -33 42 -68 95 -126 199 -328 251 -488 26 -79 38 -63 31 43 -6 101 -34 212 -74 291 l-25 49 39 -7 c21 -3 48 -9 61 -12 22 -6 23 -5 17 32 -12 75 -47 180 -83 249 -42 82 -207 255 -244 255 -12 0 -42 12 -67 27 -37 21 -43 23 -31 7z"/>
+                <path fill="#ffffff" d="M1160 3715 c-19 -14 -46 -25 -60 -25 -19 0 -46 -19 -98 -72 -148 -152 -214 -271 -224 -408 -3 -49 -5 -49 66 -35 45 9 45 12 0 -95 -34 -82 -59 -224 -49 -287 l7 -47 58 142 c64 156 104 233 191 368 33 50 59 94 59 98 0 10 -49 -4 -113 -32 -31 -14 -60 -22 -64 -18 -11 11 34 137 73 202 35 59 70 103 157 192 47 48 46 51 -3 17z"/>
+                <path fill="#ffffff" d="M1690 3666 c-252 -93 -524 -371 -594 -605 -17 -58 -21 -101 -8 -101 4 1 29 38 55 83 26 46 72 110 101 142 l53 59 7 -119 c10 -167 32 -242 51 -167 18 71 90 236 140 317 30 50 55 94 55 98 0 13 -64 -27 -119 -73 -26 -22 -50 -40 -54 -40 -11 0 32 101 65 152 42 66 134 148 233 209 47 29 85 54 85 56 0 7 -36 1 -70 -11z"/>
+                <path fill="#ffffff" d="M3590 3676 c0 -1 48 -37 108 -79 111 -78 194 -157 230 -217 21 -37 45 -111 37 -118 -2 -3 -41 23 -86 57 -46 33 -84 59 -86 57 -2 -2 17 -36 42 -75 56 -87 77 -133 126 -276 35 -102 38 -108 48 -83 13 35 31 176 31 246 0 38 4 52 12 50 11 -4 49 -55 184 -242 40 -57 20 66 -27 158 -99 195 -356 444 -527 510 -38 14 -92 22 -92 12z"/>
+                <path fill="#ffffff" d="M3767 3230 c-3 -8 -8 -50 -11 -92 -11 -145 -13 -153 -81 -226 -34 -37 -77 -92 -97 -122 -32 -51 -58 -77 -139 -139 -43 -33 -89 -135 -96 -211 -3 -33 -2 -60 3 -60 5 0 23 31 39 68 29 65 78 132 96 132 5 0 30 10 55 22 34 16 60 40 99 92 29 39 79 96 112 126 33 30 65 64 71 75 10 19 11 18 17 -8 11 -42 -3 -124 -30 -177 -27 -53 -83 -105 -150 -141 -25 -13 -45 -28 -45 -32 0 -14 74 4 135 33 33 16 60 28 61 27 9 -9 -32 -88 -57 -111 -32 -28 -33 -29 -126 -23 -51 3 -93 4 -93 2 0 -4 204 -116 233 -128 26 -10 68 37 112 127 43 87 62 161 71 270 6 75 4 88 -14 118 -11 18 -28 62 -38 98 -33 121 -118 308 -127 280z"/>
+                <path fill="#ffffff"  d="M1518 3132 c-26 -53 -58 -134 -73 -179 -15 -46 -31 -85 -36 -88 -14 -10 -10 -169 7 -253 16 -82 67 -198 106 -246 21 -25 29 -28 59 -22 19 3 70 27 113 54 84 50 110 79 59 66 -15 -5 -51 -8 -80 -8 -44 0 -57 4 -82 29 -28 26 -59 91 -49 101 3 2 31 -7 62 -22 53 -24 136 -43 136 -31 0 2 -28 23 -62 46 -77 50 -133 102 -154 143 -9 18 -18 66 -20 112 -5 80 -5 81 13 56 22 -31 49 -57 96 -93 20 -15 60 -59 89 -97 42 -58 63 -76 112 -99 75 -36 105 -67 141 -151 40 -93 49 -97 42 -19 -10 112 -47 185 -123 243 -25 19 -64 58 -86 88 -23 29 -70 85 -103 123 -34 39 -67 80 -74 93 -7 12 -19 73 -27 134 -8 62 -16 113 -17 115 -2 2 -24 -41 -49 -95z"/>
+                <path fill="#ffffff"  d="M2332 2249 c-11 -31 -37 -88 -56 -127 -73 -143 -74 -292 -3 -364 17 -16 58 -42 91 -58 34 -16 86 -52 116 -79 30 -27 75 -64 99 -83 25 -18 48 -45 53 -60 11 -34 -4 -96 -34 -133 -36 -46 -293 -155 -365 -155 -34 0 -123 45 -123 62 0 4 32 17 70 29 39 13 70 26 70 31 0 15 -74 20 -126 9 -67 -15 -110 -7 -130 25 -32 47 -18 53 138 56 l143 3 -40 21 c-29 16 -72 25 -158 33 -75 6 -128 16 -146 27 -34 20 -61 63 -61 96 l0 25 61 -30 c54 -28 73 -31 192 -37 73 -4 133 -6 135 -5 11 9 -94 55 -157 69 -129 28 -221 96 -221 163 0 17 31 83 76 163 42 74 83 152 90 174 16 43 19 100 5 92 -24 -15 -179 -282 -210 -361 -33 -83 -35 -98 -35 -200 0 -88 4 -123 22 -174 12 -35 20 -66 17 -69 -2 -3 -22 13 -44 34 -56 57 -65 98 -58 289 l5 160 -40 -85 c-34 -70 -42 -82 -49 -65 -17 43 -9 130 21 225 35 111 33 100 18 100 -7 0 -36 -24 -66 -52 -61 -61 -72 -57 -72 27 1 66 15 128 46 188 13 27 24 50 24 52 0 2 -13 -1 -30 -6 -36 -13 -98 -83 -131 -147 -31 -62 -38 -176 -15 -258 66 -232 219 -475 364 -577 119 -84 178 -155 211 -259 7 -20 20 -40 30 -43 9 -3 39 -48 66 -101 27 -54 66 -113 88 -135 45 -43 87 -53 87 -19 0 23 3 23 93 6 47 -9 67 -10 64 -2 -2 6 -48 47 -101 91 -92 74 -99 78 -112 61 -13 -18 -14 -17 -25 10 -21 53 -16 145 12 193 23 41 32 47 159 100 74 32 160 69 190 83 30 14 64 28 75 31 13 4 91 -25 230 -86 l210 -92 11 -46 c18 -73 26 -182 14 -199 -9 -13 -12 -13 -25 4 -17 22 -5 29 -138 -83 -48 -40 -87 -75 -85 -76 2 -2 32 3 68 10 88 19 100 19 100 -4 0 -33 18 -34 64 -1 41 30 93 107 142 213 10 21 25 37 34 37 11 0 21 15 29 43 32 106 98 187 226 274 75 52 141 131 219 263 145 245 179 423 108 573 -35 76 -77 127 -104 127 -10 0 -28 5 -39 10 -25 14 -24 2 4 -40 39 -58 57 -117 57 -183 0 -96 -9 -100 -74 -39 -30 29 -60 52 -65 52 -14 0 -15 9 14 -85 29 -92 40 -187 27 -230 -10 -30 -10 -29 -49 53 -21 46 -41 81 -44 78 -3 -3 1 -47 9 -98 16 -105 6 -231 -24 -293 -15 -31 -70 -83 -78 -74 -2 2 7 47 20 99 13 52 24 116 24 141 0 57 -32 185 -65 257 -37 82 -189 309 -193 289 -7 -36 32 -135 104 -262 87 -155 90 -175 37 -229 -49 -49 -97 -73 -186 -93 -73 -16 -140 -44 -152 -63 -4 -7 23 -8 82 -5 160 10 193 16 250 45 32 16 58 28 60 26 10 -10 -24 -80 -52 -105 -36 -31 -38 -32 -212 -49 -62 -6 -101 -15 -120 -28 l-28 -19 135 -6 c74 -4 143 -7 153 -8 16 -1 16 -3 2 -31 -24 -47 -46 -54 -134 -39 -76 12 -143 6 -125 -10 5 -5 37 -19 72 -31 34 -13 62 -26 62 -31 0 -14 -91 -62 -119 -62 -30 0 -266 93 -329 129 -46 27 -82 85 -82 131 0 37 23 69 63 90 18 9 56 40 84 69 29 29 86 72 127 94 106 58 122 77 136 161 10 56 9 81 0 117 -17 60 -110 304 -121 317 -18 19 -9 -122 11 -181 44 -127 34 -228 -29 -305 -24 -29 -192 -165 -239 -193 -7 -4 -24 -1 -38 9 -23 15 -27 15 -43 1 -10 -9 -23 -16 -29 -16 -21 0 -233 172 -262 212 -34 47 -54 126 -47 182 3 23 18 82 32 132 20 70 24 98 17 129 l-8 40 -22 -56z"/>
+                <path fill="#ffffff" d="M4293 1884 c-6 -11 -32 -84 -58 -163 l-49 -144 -20 25 c-12 14 -35 45 -53 71 -17 25 -41 50 -52 56 -18 10 -20 7 -26 -47 -13 -113 -86 -347 -109 -347 -5 0 -18 31 -30 70 -13 38 -27 70 -32 72 -6 2 -28 -34 -49 -79 -62 -127 -110 -195 -209 -298 -111 -114 -185 -206 -259 -320 -64 -100 -151 -260 -144 -266 3 -3 30 32 62 76 77 111 178 215 315 325 128 103 165 140 204 203 14 23 30 42 35 42 8 0 6 -76 -3 -162 -1 -16 1 -28 5 -28 11 0 91 97 126 155 51 81 96 183 128 287 17 54 35 98 40 98 6 0 31 -41 55 -90 24 -50 49 -89 55 -87 16 6 62 152 79 252 17 97 21 281 7 304 -7 11 -11 10 -18 -5z"/>
+                <path fill="#ffffff" d="M1024 1803 c-4 -54 -2 -122 5 -177 12 -91 77 -310 89 -302 4 2 27 45 52 95 39 81 70 115 70 78 0 -27 64 -204 98 -272 51 -103 160 -255 182 -255 4 0 6 15 5 33 -12 116 -14 157 -6 157 5 0 20 -17 32 -37 38 -61 97 -120 220 -219 138 -110 241 -218 312 -326 29 -43 53 -74 55 -68 5 13 -85 179 -149 277 -67 104 -137 190 -238 296 -114 121 -159 182 -218 297 -26 52 -52 94 -58 94 -5 -1 -21 -37 -34 -80 l-24 -79 -25 55 c-45 101 -92 278 -92 345 0 14 -4 25 -10 25 -5 0 -37 -36 -72 -80 -40 -53 -64 -76 -68 -68 -4 7 -29 77 -56 156 -26 78 -51 142 -55 142 -4 0 -11 -39 -15 -87z"/>
+            </g>
+        </svg> 
+                </div>
+            </div>
+        </div>
+    </nav> 
+  <!-- White Menu Panel -->
+  <div class="menu-overlay" id="menuOverlay"> 
+    <button class="menu-close" onclick="toggleMenu()">×</button> <div class="liste-menu">
+    <a href="#" class="menu-item" data-section="0">Home</a>
+    <a href="#" class="menu-item" data-section="2">join us</a>
+    <a href="#" class="menu-item" data-section="4">schedule</a>
+    <a href="#" class="menu-item" data-section="5">training programs</a>
+        <a href="#" class="menu-item" data-section="6">menu</a>
+
+    <a href="#" class="menu-item" data-section="7">analytics</a>
+
+    <a href="#" class="menu-item" data-section="8">subscription</a>
+    <a href="#" class="menu-item" data-section="9">game</a>
+        <a href="#" class="menu-item" data-section="10">contact us</a>
+
+  <a href="#" class="menu-item" id="careerLink">Hamza Career</a>
+  </div>
+
+  </div>
+ 
+  <!-- Scrollable Sections -->
+  <div class="career-page" id="careerPage" >
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <div class="hero-line1">Creative Design</div>
+            <div class="hero-line2">STUDIO</div>
+        </div>
+    </div>
+
+    <!-- Second Section --> 
+  <div class="section-2">
+        <div class="image-container" id="imageContainer">
+            <div class="image-wrapper">
+                <img src="https://picsum.photos/1200/800?random=1" alt="Background Image" class="source-image" id="sourceImage" crossorigin="anonymous">
+                <canvas id="originalCanvas" class="glitch-canvas"></canvas>
+                <canvas id="glitchCanvas" class="glitch-canvas"></canvas>
+            </div>
+        </div>
+    </div> 
+    <!-- Third Section -->
+   <div class="third-section">
+    <div class="fade-content">
+        <h2 class="section-title-car">About Our Work</h2>
+        <div class="typewriter-container">
+            <p class="typewriter-text">We are passionate about creating beautiful, functional designs that tell your story. Our team combines creativity with technical expertise to deliver exceptional results that exceed expectations.</p>
+        </div>
+        <button class="cta-button">Learn More</button>
+    </div>
+</div>
+
+    <!-- Fourth Section -->
+    <div class="fourth-section">
+        <div class="sliding-text">CREATIVE • DESIGN • STUDIO • PORTFOLIO • </div>
+        <div class="section-description-car fade-content">
+            We create stunning visual experiences that captivate and inspire
+        </div>
+    </div>
+
+    <!-- Fifth Section -->
+    <div class="fifth-section">
+        <div class="sticky-card">
+            <div class="card-content-car">
+                <h3 class="card-title-car">Project One</h3>
+                <p class="card-description-car">Innovative design solutions for modern businesses</p>
+                <div class="card-video"></div>
+                <div class="card-mentions">
+                    <span>2024</span>
+                    <span>Design</span>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-card">
+            <div class="card-content-car">
+                <h3 class="card-title-car">Project Two</h3>
+                <p class="card-description-car">Brand identity and digital experiences</p>
+                <div class="card-video"></div>
+                <div class="card-mentions">
+                    <span>2024</span>
+                    <span>Branding</span>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-card">
+            <div class="card-content-car">
+                <h3 class="card-title-car">Project Three</h3>
+                <p class="card-description-car">Interactive web applications and user interfaces</p>
+                <div class="card-video"></div>
+                <div class="card-mentions">
+                    <span>2024</span>
+                    <span>Web</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="certificate-carousel">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Certificates added directly in HTML -->
+      
+     
+      
+       <div class="certificate-item">
+        <div class="certificate-card" data-index="1">
+          <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Certificate 1" class="certificate-img">
+        </div>
+        <div class="certificate-desc">Advanced Web Development Certification - 2023</div>
+      </div>
+      
+      <div class="certificate-item">
+        <div class="certificate-card" data-index="2">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Certificate 2" class="certificate-img">
+        </div>
+        <div class="certificate-desc">UI/UX Design Excellence Award - 2022</div>
+      </div> <div class="certificate-item">
+        <div class="certificate-card" data-index="3">
+          <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Certificate 3" class="certificate-img">
+        </div>
+        <div class="certificate-desc">Advanced Web Development Certification - 2023</div>
+      </div>
+      
+      <div class="certificate-item">
+        <div class="certificate-card" data-index="4">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Certificate 4" class="certificate-img">
+        </div>
+        <div class="certificate-desc">UI/UX Design Excellence Award - 2022</div>
+      </div>
+    </div>
+    
+    <div class="carousel-nav">
+      <button class="carousel-prev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="carousel-counter">
+        <span class="current-slide">1</span>/<span class="total-slides">5</span>
+      </div>
+      <button class="carousel-next" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>   
+
+    <!-- Sixth Section -->
+    <div class="sixth-section" id="sixthSection">
+    <div class="parentheses left-paren">(</div>
+    <div class="center-text" id="centerText">GAMOUN</div>
+    <div class="parentheses right-paren">)</div>
+    <div class="big-text left">CREATIVE</div>
+    <div class="big-text right">VISION</div>
+    <div class="fullscreen-video" id="fullscreenVideo">
+        <video width="100%" height="100%" autoplay muted>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+    <!-- Seventh Section -->
+    <div class="seventh-section">
+        <div class="brands-slider">
+            <div class="brand-logo">BRAND 1</div>
+            <div class="brand-logo">BRAND 2</div>
+            <div class="brand-logo">BRAND 3</div>
+            <div class="brand-logo">BRAND 4</div>
+            <div class="brand-logo">BRAND 5</div>
+            <div class="brand-logo">BRAND 6</div>
+            <div class="brand-logo">BRAND 1</div>
+            <div class="brand-logo">BRAND 2</div>
+            <div class="brand-logo">BRAND 3</div>
+            <div class="brand-logo">BRAND 4</div>
+            <div class="brand-logo">BRAND 5</div>
+            <div class="brand-logo">BRAND 6</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-big-text">
+            <div>CONTACT</div>
+            <div>STUDIO</div>
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-left">
+                <div>LOCATION</div>
+                <div>New York, NY</div>
+            </div>
+            <div class="footer-center">
+                <div>hello@studio.com</div>
+                <div>@instagram</div>
+                <div>+1 234 567 890</div>
+            </div>
+            <div class="footer-right">
+                <div>CONTACT</div>
+                <div>Get in touch</div>
+            </div>
+        </div>
+    </footer>
+</div>
+    <div class="sections-container" id="sectionsContainer">
+      <!-- Section 1 - Hero -->
+      <section>
+        <div class="section-content">
+        <div class="hero-container">
+        <div class="hero-title">
+        <div class="title-container" id="mainTitle">
+            <span>ESPACE GAMOUN</span>
+        </div>
+        <div class="title-container" id="getTitle" style="display: none;">
+            <span class="get-part" id="getText">GET</span>
+            <span class="changing-part" id="changingWord">POWER</span>
+        </div>
+    </div>
+
+        
+<div class="hero-message">
+  KNOW NOTHING<br>
+  <span class="second-line">
+    OF THE IMPOSSIBLE   
+    <div class="arrow-group">
+      <svg class="arrow arrow-1" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5" fill="none" stroke-width="2"/>
+      </svg>
+      <svg class="arrow arrow-2" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5" fill="none" stroke-width="2"/>
+      </svg>
+      <svg class="arrow arrow-3" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5" fill="none" stroke-width="2"/>
+      </svg>
+    </div>
+  </span>
+</div>
+    </div>   </div>
+
+      </section>
+
+      <!-- Section 2 - Gallery -->
+     <!-- Section 2 - Gallery -->
+<section>
+  <div class="section-content">
+  <div class="gallery-container">
+    <div class="gallery-content">
+      <div class="gallery-img" style="background-image: url('https://www.blogdelfotografo.com/wp-content/uploads/2020/02/posedepie5.webp')"></div>
+      <div class="gallery-img" style="background-image: url('https://www.blogdelfotografo.com/wp-content/uploads/2020/02/posedepie5.webp')"></div>
+      <div class="gallery-img" style="background-image: url('https://www.blogdelfotografo.com/wp-content/uploads/2020/02/posedepie5.webp')"></div>
+    </div>
+    <div class="gallery-text-section">
+      <h2>Champions</h2>
+      <p>Meet our elite fighters with unbeatable strength and technique. Every punch tells a story of discipline.</p>
+      <a href="#" class="btn">View Fighters</a>
+    </div>
+  </div>   </div>
+
+</section>
+<section class="section"  class="tall-section">
+               <div class="section-content">
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Join Our Community</h2>
+      <p class="section-subtitle">Start your fitness journey with us today</p>
+    </div>
+    
+    <div class="section-content">
+      <div class="join-container">
+        
+        <div class="join-tabs">
+          <div class="join-tab active" data-tab="join">Join Now</div>
+          <div class="join-tab" data-tab="validate">Check Validity</div>
+        </div>
+        
+        <div class="join-content">
+          <!-- Join Form -->
+          <div class="join-form active" id="joinForm">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="join-name">Full Name</label>
+                  <input type="text" id="join-name" name="join-name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="join-email">Email</label>
+                  <input type="email" id="join-email" name="join-email" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="join-phone">Phone Number</label>
+                  <input type="tel" id="join-phone" name="join-phone">
+                </div>
+                
+                <div class="form-group">
+                  <label for="join-goal">Primary Goal</label>
+                  <select id="join-goal" name="join-goal">
+                    <option>Weight Loss</option>
+                    <option>Muscle Building</option>
+                    <option>General Fitness</option>
+                    <option>Sports Performance</option>
+                    <option>Rehabilitation</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="join-message">Additional Information</label>
+                <textarea id="join-message" name="join-message" rows="3"></textarea>
+              </div>
+              
+              <button type="submit" class="btn">Submit Application</button>
+            </form>
+          </div>
+          
+          <!-- Validate Form -->
+          <div class="join-form" id="validateForm">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="member-id">Member ID</label>
+                  <input type="text" id="member-id" name="member-id" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="member-pin">PIN</label>
+                  <input type="password" id="member-pin" name="member-pin" required>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn">Check Validity</button>
+              
+              <div id="validityResult">
+                <h4>Membership Status</h4>
+                <p><strong>Plan:</strong> Premium Membership</p>
+                <p><strong>Expires in:</strong> 15 days</p>
+                <p><strong>Last Payment:</strong> May 15, 2023</p>
+                <p><strong>Next Payment:</strong> June 15, 2023</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   </div>
+
+</section> 
+      <!-- Section 3 - Cards -->
+      
+      <section>
+        <div class="section-content">
+        <div class="cards-container">
+          <div class="card-wrapper">
+            <div class="card" id="mainCard">
+              <div class="card-content">
+                <h3>Experience</h3>
+                <p>Immerse yourself in our interactive experiences designed to engage and inspire. Every interaction tells a story.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-text-section">
+            <h2>Innovation</h2>
+            <p>Pushing the boundaries of what's possible with cutting-edge technology and creative design solutions.</p>
+            <a href="#" class="btn">Explore</a>
+          </div>  </div>
+
+        </div>  
+      </section> 
+ <section class="schedule-container"   class="tall-section">
+                    <div class="section-content">
+
+        <div class="schedule-header">
+            <h2 class="section-title">Class Schedule</h2>
+            <p class="section-subtitle">Plan your training sessions</p>
+        </div>
+        
+        <div class="days-header">
+            <div class="time-column"></div>
+            <div class="day-header active" data-day="monday">Monday</div>
+            <div class="day-header" data-day="tuesday">Tuesday</div>
+            <div class="day-header" data-day="wednesday">Wednesday</div>
+            <div class="day-header" data-day="thursday">Thursday</div>
+            <div class="day-header" data-day="friday">Friday</div>
+            <div class="day-header" data-day="saturday">Saturday</div>
+            <div class="day-header" data-day="sunday">Sunday</div>
+        </div>
+        
+        <div class="schedule-content">
+            <div class="time-slots">
+                <div class="time-slot">08:00</div>
+                <div class="time-slot">09:00</div>
+                <div class="time-slot">10:00</div>
+                <div class="time-slot">11:00</div>
+                <div class="time-slot">12:00</div>
+                <div class="time-slot">13:00</div>
+                <div class="time-slot">14:00</div>
+                <div class="time-slot">15:00</div>
+                <div class="time-slot">16:00</div>
+                <div class="time-slot">17:00</div>
+                <div class="time-slot">18:00</div>
+                <div class="time-slot">19:00</div>
+                <div class="time-slot">20:00</div>
+                <div class="time-slot">21:00</div>
+                <div class="time-slot">22:00</div>
+            </div>
+            
+            <div class="days-grid">
+                <div class="day-column" data-day="monday">
+                    <div class="hour-slot">
+                        <div class="event important">Team Meeting</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Project Review</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Lunch Break</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Client Call</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Work Session</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Team Sync</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Dinner</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="tuesday">
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Morning Standup</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Design Review</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event break">Lunch</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event important">Workshop</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Email Review</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Planning</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Dinner</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="wednesday">
+                    <div class="hour-slot">
+                        <div class="event">Email Check</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Team Sync</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Lunch</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event">Code Review</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event important">Training Session</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Work Session</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Retrospective</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Dinner</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="thursday">
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Planning</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Client Presentation</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Lunch</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">1-on-1 Meeting</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event important">Demo Prep</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Documentation</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Team Sync</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="friday">
+                    <div class="hour-slot">
+                        <div class="event">Weekly Review</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Team Meeting</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Lunch</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Documentation</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event important">Sprint Planning</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Wrap Up</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Week Review</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="saturday">
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Gym Session</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Personal Project</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event break">Brunch</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Family Time</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Shopping</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event break">Relax</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Dinner Plans</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+                
+                <div class="day-column hidden" data-day="sunday">
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event break">Reading</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Lunch</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event meeting">Outdoor Activity</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event important">Week Planning</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot">
+                        <div class="event">Meal Prep</div>
+                    </div>
+                    <div class="hour-slot">
+                        <div class="event break">Dinner</div>
+                    </div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                    <div class="hour-slot"></div>
+                </div>
+            </div>
+        </div>   </div>
+
+    </section> 
+   
+    
+<section class="training-section"  class="tall-section">
+                 <div class="section-content">
+
+    <div class="section-header">
+      <h2 class="section-title">Training Programs</h2>
+      <p class="section-subtitle">Expert coaches and diverse classes to help you achieve your goals</p>
+    </div>
+    
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="classes">Classes</button>
+      <button class="tab-btn" data-tab="coaches">Coaches</button>
+    </div>
+    
+    <!-- Classes Tab Content -->
+    <div id="classes" class="tab-content active">
+      <div class="class-categories">
+        <button class="category-btn active" data-category="boxing">Boxing</button>
+        <button class="category-btn" data-category="swimming">Swimming</button>
+        <button class="category-btn" data-category="yoga">Yoga</button>
+        <button class="category-btn" data-category="hiit">HIIT</button>
+        <button class="category-btn" data-category="karate">Karate</button>
+      </div>
+      
+      <div class="class-detail-container">
+        <div class="class-gallery">
+          <div class="class-slides">
+            <div class="class-slide" style="background-image: url('https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="class-slide" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="class-slide" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+          </div>
+          <div class="slide-nav">
+            <div class="slide-dot active"></div>
+            <div class="slide-dot"></div>
+            <div class="slide-dot"></div>
+          </div>
+        </div>
+        
+        <div class="class-info">
+          <h3 class="class-title">Boxing Fundamentals</h3>
+          <p class="class-description">
+            Learn proper boxing techniques, improve fitness, and build confidence with certified instructors. 
+            Suitable for all skill levels from beginners to advanced. Our boxing program focuses on technique, 
+            footwork, and conditioning.
+          </p>
+          
+          <div class="class-stats">
+            <div class="stat-card">
+              <div class="stat-value" data-count="12">0</div>
+              <div class="stat-label">Students per class</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-count="3">0</div>
+              <div class="stat-label">Coaches</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-count="15">0</div>
+              <div class="stat-label">Training bags</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" data-count="2">0</div>
+              <div class="stat-label">Rings</div>
+            </div>
+          </div>
+          
+          <div class="class-schedule">
+            <h4 class="schedule-title">Class Schedule</h4>
+            <div class="schedule-item">
+              <span>Monday</span>
+              <span>6:00 AM - 7:00 AM</span>
+            </div>
+            <div class="schedule-item">
+              <span>Wednesday</span>
+              <span>6:00 AM - 7:00 AM</span>
+            </div>
+            <div class="schedule-item">
+              <span>Friday</span>
+              <span>6:00 AM - 7:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Coaches Tab Content - Now Empty -->
+    <div id="coaches" class="tab-content">
+        
+       <div id="slider">
+        <!-- Fallback visible images -->
+        <div class="fallback-images">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Coach 1" class="active">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Coach 2">
+            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Coach 3">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Coach 4">
+            <img src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Coach 5">
+        </div>
+
+        <!-- Hidden images for WebGL -->
+        <div class="webgl-images">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="WebGL Coach 1" crossorigin="anonymous">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="WebGL Coach 2" crossorigin="anonymous">
+            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="WebGL Coach 3" crossorigin="anonymous">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="WebGL Coach 4" crossorigin="anonymous">
+            <img src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="WebGL Coach 5" crossorigin="anonymous">
+        </div> 
+    </div>
+
+    <div class="slider-content-container">
+        <div class="slider-content">
+            <!-- Coach image that overlaps the card -->
+           
+            <div class="content-wrapper">
+                <h2 id="slide-title">Alex Johnson</h2>
+                <span id="slide-specialty">Strength Training</span>
+                <p id="slide-description">Specializing in powerlifting and functional strength, Alex transforms beginners into competitive athletes with his science-based approach.</p>
+                
+                <div class="coach-stats">
+                   <div class="stat-item">
+    <span class="stat-label">Experience</span>
+    <div class="stat-value-container">
+        <div class="stat-value-scroller">
+            <span class="stat-value" id="experience">12 years of professional training experience with elite athletes</span>
+        </div>
+    </div>
+</div> 
+                    <div class="stat-item">
+    <span class="stat-label">equipment</span>
+    <div class="stat-value-container">
+        <div class="stat-value-scroller">
+            <span class="stat-value" id="equipment">12 years of professional training experience with elite athletes</span>
+        </div>
+    </div>
+</div>
+                      <div class="stat-item">
+    <span class="stat-label">clients</span>
+    <div class="stat-value-container">
+        <div class="stat-value-scroller">
+            <span class="stat-value" id="clients">12 years of professional training experience with elite athletes</span> 
+        </div>
+    </div>
+</div>  <div class="stat-item">
+    <span class="stat-label">classes</span>
+    <div class="stat-value-container">
+        <div class="stat-value-scroller">
+            <span class="stat-value" id="coach-classes">12 years of professional training experience with elite athletes</span>
+        </div>
+    </div>
+</div>
+                </div>
+ 
+                <div class="navigation-container">
+                    <button class="nav-button prev"></button>
+                    <div class="pagination-container">
+                        <button class="active" data-slide="0"></button>
+                        <button data-slide="1"></button>
+                        <button data-slide="2"></button>
+                        <button data-slide="3"></button>
+                        <button data-slide="4"></button>
+                    </div>
+                    <button class="nav-button next"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden slide data -->
+    <div class="slide-data">
+        <!-- Coach 1 -->
+        <div data-slide-title="0">Alex Johnson</div>
+        <div data-slide-specialty="0">Strength Training</div>
+        <div data-slide-description="0">Specializing in powerlifting and functional strength, Alex transforms beginners into competitive athletes with his science-based approach.</div>
+        <div data-experience="0">12 years</div>
+        <div data-equipment="0">Barbells, Kettlebells</div>
+        <div data-clients="0">250+</div>
+        <div data-classes="0">Powerlifting, Strongman</div>
+        <div data-coach-image="0">https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80</div>
+        
+        <!-- Coach 2 -->
+        <div data-slide-title="1">Sarah Williams</div>
+        <div data-slide-specialty="1">Yoga & Mobility</div>
+        <div data-slide-description="1">With a holistic approach to fitness, Sarah combines traditional yoga with modern mobility techniques for optimal body performance.</div>
+        <div data-experience="1">8 years</div>
+        <div data-equipment="1">Mats, Blocks, Straps</div>
+        <div data-clients="1">180+</div>
+        <div data-classes="1">Vinyasa, Yin, Mobility</div>
+        <div data-coach-image="1">https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80</div>
+        
+        <!-- Coach 3 -->
+        <div data-slide-title="2">Marcus Chen</div>
+        <div data-slide-specialty="2">HIIT & Conditioning</div>
+        <div data-slide-description="2">Marcus creates high-intensity programs that maximize fat loss while preserving muscle mass, with measurable results in weeks.</div>
+        <div data-experience="2">6 years</div>
+        <div data-equipment="2">Battle Ropes, TRX, Dumbbells</div>
+        <div data-clients="2">300+</div>
+        <div data-classes="2">Metabolic Conditioning, Tabata</div>
+        <div data-coach-image="2">https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80</div>
+        
+        <!-- Coach 4 -->
+        <div data-slide-title="3">Elena Rodriguez</div>
+        <div data-slide-specialty="3">Olympic Weightlifting</div>
+        <div data-slide-description="3">Former competitive weightlifter now coaching athletes to perfect their snatch and clean & jerk techniques with precision.</div>
+        <div data-experience="3">10 years</div>
+        <div data-equipment="3">Olympic Bars, Bumper Plates</div>
+        <div data-clients="3">120+</div>
+        <div data-classes="3">Weightlifting, Power Cleans</div>
+        <div data-coach-image="3">https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80</div>
+        
+        <!-- Coach 5 -->
+        <div data-slide-title="4">Jamal Wilson</div>
+        <div data-slide-specialty="4">Boxing & MMA</div>
+        <div data-slide-description="4">Professional fighter turned coach, Jamal teaches combat techniques while improving cardiovascular endurance and core strength.</div>
+        <div data-experience="4">15 years</div>
+        <div data-equipment="4">Punching Bags, Focus Mitts</div>
+        <div data-clients="4">400+</div>
+        <div data-classes="4">Boxing, Kickboxing, MMA</div>
+        <div data-coach-image="4">https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80</div>
+    </div>
+
+    </div>   </div>
+
+  </section>
+ <section class="section"  class="tall-section" >
+               <div class="section-content">
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Menu</h2>
+      <p class="section-subtitle">Healthy refreshments and snacks</p>
+    </div>
+    
+    <div class="section-content">
+      <div class="menu-container">
+        <!-- Menu Navigation with Counter -->
+        <div class="menu-nav-container">
+          <div class="menu-nav">
+            <div class="menu-nav-item active" data-category="juices">Juices & Smoothies</div>
+            <div class="menu-nav-item" data-category="snacks">Healthy Snacks</div>
+            <div class="menu-nav-item" data-category="protein">Protein Shakes</div>
+            <div class="menu-nav-item" data-category="bars">Energy Bars</div>
+          </div>
+        </div>
+                  <div class="menu-counter">1/8</div>
+
+        <!-- Menu Items Carousel -->
+        <div class="menu-carousel">
+          <div class="menu-track">
+            <!-- Juice Items -->
+           <div class="menu-item-menu" data-category="juices">
+  <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+  <div class="menu-item-content">
+    <div class="menu-item-name">Green Detox Juice</div>
+    <div class="menu-item-details">
+      <p>Spinach, kale, cucumber, apple, and lemon</p>
+      <div class="menu-item-calories">
+        <svg class="calorie-icon" viewBox="0 0 24 24">
+          <path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z"/>
+        </svg>
+        <span>120 kcal</span>
+      </div>
+    </div>
+  </div>
+</div>
+           
+
+<div class="menu-item-menu" data-category="juices">
+  <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+  <div class="menu-item-content">
+    <div class="menu-item-name">Green Detox Juice</div>
+    <div class="menu-item-details">
+      <p>Spinach, kale, cucumber, apple, and lemon</p>
+      <div class="menu-item-calories">
+        <svg class="calorie-icon" viewBox="0 0 24 24">
+          <path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z"/>
+        </svg>
+        <span>120 kcal</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-item-menu" data-category="juices">
+  <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+  <div class="menu-item-content">
+    <div class="menu-item-name">Green Detox Juice</div>
+    <div class="menu-item-details">
+      <p>Spinach, kale, cucumber, apple, and lemon</p>
+      <div class="menu-item-calories">
+        <svg class="calorie-icon" viewBox="0 0 24 24">
+          <path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z"/>
+        </svg>
+        <span>120 kcal</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-item-menu" data-category="juices">
+  <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+  <div class="menu-item-content">
+    <div class="menu-item-name">Green Detox Juice</div>
+    <div class="menu-item-details">
+      <p>Spinach, kale, cucumber, apple, and lemon</p>
+      <div class="menu-item-calories">
+        <svg class="calorie-icon" viewBox="0 0 24 24">
+          <path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z"/>
+        </svg>
+        <span>120 kcal</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-item-menu" data-category="juices">
+  <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+  <div class="menu-item-content">
+    <div class="menu-item-name">Green Detox Juice</div>
+    <div class="menu-item-details">
+      <p>Spinach, kale, cucumber, apple, and lemon</p>
+      <div class="menu-item-calories">
+        <svg class="calorie-icon" viewBox="0 0 24 24">
+          <path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z"/>
+        </svg>
+        <span>120 kcal</span>
+      </div>
+    </div>
+  </div>
+</div>
+            <!-- More items... -->
+          </div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <div class="menu-controls">
+          <button class="menu-arrow prev">&larr;</button>
+          <button class="menu-arrow next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>   </div>
+
+</section> 
+  <!-- Pricing Section -->
+  <!-- Replace your Pricing Section with this -->
+<!-- Keep your existing HTML structure -->
+
+
+  <!-- Analytics Section -->
+  <!-- Replace your Analytics Section with this -->
+<section class="section counter-section"  class="tall-section"   >
+               <div class="section-content">
+
+  <div class="section-container">
+    <div class="counter-content">
+      <div class="counter-text">
+        <h2 class="counter-title">Fitness Center</h2>
+        <p class="counter-subtitle">Transforming lives through fitness</p>
+        <p class="counter-description">Our state-of-the-art facility and expert coaches help you achieve your fitness goals with personalized programs tailored to your needs.</p>
+        <p class="counter-description">Join our community of dedicated members who have transformed their lives through our programs.</p>
+      </div>
+      
+      <div class="counter-stats">
+        <div class="counter-card">
+          <div class="counter-icon">
+            <!-- Filled Clock Icon -->
+           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=fill"> <g id="clock"> <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C6.61779 3.25 2.25 7.61779 2.25 13C2.25 18.3822 6.61779 22.75 12 22.75C17.3822 22.75 21.75 18.3822 21.75 13C21.75 7.61779 17.3822 3.25 12 3.25ZM12.417 8.95911C12.417 8.54489 12.0812 8.20911 11.667 8.20911C11.2528 8.20911 10.917 8.54489 10.917 8.95911V12.6491C10.917 13.0941 11.0674 13.5365 11.2742 13.8993C11.4809 14.2617 11.7844 14.6155 12.1656 14.8417L12.1666 14.8423L14.9546 16.5061C15.3103 16.7184 15.7708 16.6021 15.983 16.2464C16.1953 15.8908 16.079 15.4303 15.7233 15.2181L12.9333 13.5531L12.9313 13.5519C12.827 13.4901 12.6899 13.3537 12.5772 13.1562C12.4646 12.9587 12.417 12.7712 12.417 12.6491V8.95911Z" fill="#ffffff"></path> </g> </g> </g></svg>
+
+          </div>
+          <div class="counter-number" data-count="15000">0</div>
+          <div class="counter-label">Hours of Training</div>
+        </div>
+        
+        <div class="counter-card">
+          <div class="counter-icon">
+            <!-- Filled Members Icon -->
+           <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-people-fill">
+  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+  <g id="SVGRepo_iconCarrier" transform="scale(-1, 1) translate(-16, 0)"> 
+    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#ffffff"></path>
+    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" fill="#ffffff"></path>
+    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="#ffffff"></path>
+  </g>
+</svg>
+          </div>
+          <div class="counter-number" data-count="1200">0</div>
+          <div class="counter-label">Active Members</div>
+        </div>
+        
+        <div class="counter-card">
+          <div class="counter-icon">
+            <!-- Original Outlined Coach Icon -->
+            <svg viewBox="0 0 6.3500002 6.3500002" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+              <path d="m 2.5032059,-0.0095735 c -0.043217,-6.35e-4 -0.0909,0.00531 -0.1493441,0.024289 C 2.2369795,0.0525379 2.1848433,0.1094109 2.1259683,0.1650936 2.0670958,0.2207129 2.0130256,0.2808305 1.9606037,0.3407933 1.8557572,0.4607694 1.7291409,0.5919178 1.7440793,0.5810887 1.7590282,0.5703466 1.5965582,0.6493864 1.4500399,0.7118302 1.3767847,0.7430018 1.3005529,0.7771219 1.2293826,0.8156998 1.1582044,0.8544035 1.0898255,0.885282 1.0175096,0.9846817 0.9451937,1.0840436 0.9358089,1.159797 0.9208732,1.2394466 0.9059507,1.319096 0.8985953,1.400403 0.8914171,1.479742 0.8770502,1.6384195 0.8500416,1.8161314 0.8557619,1.7985856 c 0.00572,-0.017558 -0.07988,0.1429176 -0.1617478,0.2795696 -0.040934,0.068351 -0.082447,0.141311 -0.1173056,0.214457 -0.034859,0.073146 -0.069638,0.1380463 -0.069763,0.2609662 -1.217e-4,0.1229198 0.03557,0.1882605 0.070279,0.2614827 0.034711,0.073247 0.07651,0.1434605 0.1173057,0.2118733 0.081592,0.1368131 0.1663991,0.2976496 0.1607158,0.2800863 -0.00569,-0.017526 0.019526,0.1632389 0.033589,0.3219442 0.00704,0.079296 0.014684,0.1606161 0.029456,0.2402954 0.014764,0.079742 0.022966,0.1557634 0.095083,0.2552817 0.072115,0.099531 0.1412954,0.130652 0.2123916,0.1694987 0.071099,0.038784 0.1469443,0.071021 0.2201413,0.1023191 0.1463886,0.062722 0.3099884,0.1442029 0.2950712,0.1333254 -0.014922,-0.010713 0.109855,0.1175901 0.2144581,0.2377115 0.0523,0.060092 0.1060847,0.1214847 0.1648486,0.1772502 0.058759,0.055816 0.1110827,0.1117997 0.2278909,0.1498616 0.1168056,0.03815 0.190463,0.023744 0.2707852,0.013435 0.080328,-0.010432 0.1605915,-0.026186 0.2382282,-0.043925 0.1552734,-0.035351 0.3341952,-0.068207 0.3157432,-0.068213 -0.018441,-1.85e-5 0.1595093,0.03148 0.3147086,0.06718 0.077602,0.017849 0.1568874,0.035993 0.2371963,0.046509 0.08029,0.010893 0.1544188,0.024387 0.2713012,-0.013436 C 4.1130209,5.0582357 4.1651597,5.0033666 4.2240321,4.9477472 4.2829046,4.8921276 4.3395598,4.8298801 4.3919791,4.7699803 4.4968281,4.6500042 4.6208595,4.521427 4.6059211,4.5322686 4.5909722,4.543008 4.7555086,4.4639712 4.9020269,4.4015274 4.9752821,4.3703558 5.0494475,4.3357186 5.1206178,4.2971408 5.1917933,4.258437 5.2601749,4.2280628 5.3324908,4.1286758 5.4048041,4.0293137 5.4141915,3.9535603 5.4291272,3.8739109 5.4440497,3.7942615 5.4514051,3.7129545 5.4585806,3.6336155 5.4729475,3.4749377 5.4999562,3.2946422 5.4942385,3.312188 5.4885235,3.3297458 5.5741162,3.1692831 5.6559863,3.0326187 5.69692,2.9642673 5.7384331,2.8938913 5.7732919,2.8207451 5.8081508,2.7475992 5.8429303,2.6827115 5.8430546,2.5597792 5.8431763,2.4368593 5.807484,2.3715183 5.7727734,2.2982965 5.7380653,2.2250492 5.6967824,2.152252 5.6559863,2.0838392 5.5743941,1.9470137 5.4890712,1.7882568 5.4947545,1.8058201 5.500443,1.8233461 5.4752282,1.6425809 5.4611656,1.4838759 5.4541542,1.404454 5.4464812,1.3232598 5.4317096,1.2435805 5.4169458,1.163838 5.4087437,1.0878171 5.3366262,0.9882988 5.2645114,0.8887679 5.1953308,0.8581762 5.1242346,0.8193169 5.0531358,0.7805332 4.977285,0.7458378 4.9040933,0.7144138 4.7577047,0.6516914 4.5941022,0.5728705 4.6090221,0.5836723 4.6239446,0.5943853 4.499683,0.4630319 4.39508,0.3428602 4.3427798,0.282768 4.2884767,0.2219049 4.2297154,0.1661267 4.1709567,0.1103108 4.1186327,0.0543271 4.0018218,0.0162652 3.8850188,-0.0218851 3.8113668,-0.0055365 3.7310393,0.004896 3.6507118,0.0153285 3.5704478,0.0315991 3.4928111,0.0493378 3.3375377,0.0846891 3.1586212,0.1174185 3.1770679,0.1175506 3.1955094,0.1175694 3.0175559,0.0834873 2.8623566,0.0477876 2.784757,0.0299388 2.7054693,0.0138614 2.6251629,0.0033458 2.5850177,-0.002102 2.5464229,-0.0089361 2.5032059,-0.0095735 Z m 0.6810957,1.3916462 a 0.26407552,0.26514563 1.664302 0 1 0.2098067,0.1069702 l 0.3064404,0.4149617 0.5167657,0.1953371 a 0.26407552,0.26514563 1.664302 0 1 0.1209225,0.403076 L 4.0395461,2.9240974 4.0142255,3.4780688 A 0.26407552,0.26514563 1.664302 0 1 3.6721272,3.7188812 L 3.1791343,3.563335 2.6468667,3.7090625 A 0.26407552,0.26514563 1.664302 0 1 2.3109702,3.4548146 L 2.3068427,2.9364998 2.0050537,2.4734789 A 0.26407552,0.26514563 1.664302 0 1 2.1404463,2.0760872 L 2.6324046,1.9133065 2.9781198,1.4807747 a 0.26407552,0.26514563 1.664302 0 1 0.1865524,-0.098185 0.26407552,0.26514563 1.664302 0 1 0.019632,-5.292e-4 z"></path>
+              <path d="m 1.32395,4.6940153 v 0.8454266 c 0,0.22689 0.085796,0.4353634 0.2320264,0.5999633 0.073102,0.0823 0.1640284,0.155757 0.2831888,0.1953369 0.1191578,0.0396 0.2710842,0.033444 0.396875,-0.029456 L 3.1755175,5.8365814 4.1149947,6.3052865 a 0.26460996,0.26460996 0 0 0 0.1188561,0.027389 c 0.4351602,0 0.7932315,-0.3580833 0.7932315,-0.7932332 V 4.6976326 c -0.1063255,0.047962 -0.2399666,0.1090639 -0.2284096,0.1007693 0.01696,-0.0123 -0.1239096,0.1336209 -0.2428795,0.2697509 -0.059468,0.06796 -0.1238859,0.1384379 -0.1906852,0.2015381 -0.066799,0.0631 -0.1257724,0.1255652 -0.2583815,0.168465 -0.1326198,0.0429 -0.2168922,0.027386 -0.3079909,0.014986 -0.09112,-0.011999 -0.1806178,-0.03241 -0.2687188,-0.05271 -0.1760908,-0.0405 -0.3779838,-0.075984 -0.3570843,-0.075964 0.020929,0 -0.1824646,0.036898 -0.3586348,0.076998 -0.08809,0.0201 -0.1791679,0.038326 -0.2702666,0.050126 -0.09113,0.0117 -0.1744398,0.027797 -0.306959,-0.015502 C 2.1045317,5.3929098 2.0448735,5.3293743 1.9781747,5.2660743 1.9114944,5.2028043 1.8504047,5.133253 1.7911063,5.0650529 1.6724248,4.9287629 1.5313251,4.7831021 1.5482267,4.795302 1.5595777,4.803572 1.4276667,4.741909 1.32395,4.6940153 Z"></path>
+            </svg>
+          </div>
+          <div class="counter-number" data-count="25">0</div>
+          <div class="counter-label">Certified Coaches</div>
+        </div>
+        
+        <div class="counter-card">
+          <div class="counter-icon">
+            <!-- Original Outlined Champion Icon -->
+            <svg viewBox="0 0 6.3500002 6.3500002" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+              <path d="m 2.0062005,0.13306262 c -0.655029,0 -1.1895905,0.5345615 -1.1895905,1.18959148 0,0.64681 0.2600536,1.3675495 0.6175322,1.9549195 0.1787419,0.2936899 0.3818334,0.5542349 0.6051312,0.749825 0.2233004,0.1956001 0.471461,0.3379639 0.7539593,0.3379639 H 3.535307 c 0.2969207,0 0.5437558,-0.1660954 0.7658444,-0.3808553 C 4.5232321,3.7697473 4.7247864,3.4885823 4.9026657,3.1819722 5.2580858,2.5693422 5.5205604,1.8706771 5.5119297,1.320587 5.5108714,0.66644702 4.9767094,0.13306262 4.3223392,0.13306262 Z M 3.18339,0.93249702 A 0.26412889,0.265092 1.849479 0 1 3.3921647,1.0420511 L 3.6701836,1.417222 4.1388877,1.5944722 A 0.26412889,0.265092 1.849479 0 1 4.2608448,1.9954813 L 3.9890277,2.3794372 3.9652681,2.8791481 A 0.26412889,0.265092 1.849479 0 1 3.6200689,3.1194438 L 3.1766854,2.9783669 2.6935113,3.1116923 A 0.26412889,0.265092 1.849479 0 1 2.3591652,2.8589946 L 2.3555404,2.3892557 2.0821703,1.969643 A 0.26412889,0.265092 1.849479 0 1 2.2191133,1.5738016 L 2.6599145,1.4229064 2.9746231,1.0322326 a 0.26412889,0.265092 1.849479 0 1 0.1467618,-0.093018 0.26412889,0.265092 1.849479 0 1 0.06201,-0.00672 z"></path>
+              <path d="m 1.9300199,4.6290474 c -0.33744,0 -0.61719,0.2817 -0.61719,0.61914 v 0.35156 c 0,0.33744 0.27975,0.61719 0.61719,0.61719 h 2.46875 c 0.33743,0 0.61718,-0.27975 0.61718,-0.61719 v -0.35156 c 0,-0.33744 -0.27975,-0.61914 -0.61718,-0.61914 z"></path>
+              <path d="M 0.2740077,0.92577912 A 0.26460996,0.26460996 0 0 0 0.0099403,1.1898457 c 0,0.67152 -0.031006,1.1590911 0.1896534,1.5585612 0.1103206,0.19973 0.2993496,0.3576738 0.5332994,0.4433838 0.1282436,0.046977 0.2711212,0.075923 0.4304666,0.093534 C 0.7981923,2.6501343 0.5380751,1.8953124 0.5380751,1.2125833 c 0,-0.098654 0.012515,-0.194166 0.033073,-0.28680418 z m 5.4833866,0 c 0.020399,0.092 0.032946,0.18679068 0.033073,0.28473708 C 5.8001245,1.8257351 5.5068127,2.6068281 5.1093715,3.2920429 5.2997947,3.2760277 5.4679666,3.2459638 5.6157999,3.1917907 5.8497603,3.1060908 6.0382548,2.9481369 6.1485834,2.7484069 6.3692353,2.3489368 6.3403031,1.8613657 6.3403031,1.1898457 A 0.26460996,0.26460996 0 0 0 6.0746879,0.92577912 Z"></path>
+            </svg>
+          </div>
+          <div class="counter-number" data-count="15">0</div>
+          <div class="counter-label">Champions Trained</div>
+        </div>
+      </div>
+    </div>
+  </div>   </div>
+
+</section>
+<section class="section">
+               <div class="section-content">
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Membership Plans</h2>
+      <p class="section-subtitle">Choose the perfect plan for your fitness journey</p>
+    </div>
+    
+    <div class="section-content">
+      <div class="pricing-tabs-container">
+
+      <div class="pricing-tabs">
+        <div class="pricing-tab active">Boxing</div>
+        <div class="pricing-tab">Swimming</div>
+        <div class="pricing-tab">Yoga</div>
+        <div class="pricing-tab">Karate</div>
+        <div class="pricing-tab">HIIT</div>
+      </div>        </div>  
+ 
+      
+      <div class="pricing-container">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3 class="shine-basic">Basic</h3>
+            <div class="price">$29<span class="price-period">/month</span></div>
+            <ul class="features-list">
+              <li>Gym access during off-peak hours</li>
+              <li>Basic equipment usage</li>
+              <li>Locker room access</li>
+              <li>Free fitness assessment</li>
+            </ul>
+            <button class="btn btn-outline">Get Started</button>
+          </div>
+          
+          <div class="pricing-card featured">
+            <h3 class="shine-gold">Premium <span class="recommended-ship">most popular</span> </h3>
+            <div class="price">$59<span class="price-period">/month</span></div>
+            <ul class="features-list">
+              <li>24/7 gym access</li>
+              <li>All equipment and facilities</li>
+              <li>Group classes included</li>
+              <li>Personal trainer consultation</li>
+              <li>Nutrition guidance</li>
+              <li>Guest passes (2/month)</li>
+            </ul>
+            <button class="btn">Go Premium</button>
+          </div>
+          
+          <div class="pricing-card elite-mem">
+            <h3 class="shine-violet">Elite</h3>
+            <div class="price">$99<span class="price-period">/month</span></div>
+            <ul class="features-list">
+              <li>All Premium features</li>
+              <li>Unlimited personal training</li>
+              <li>Massage therapy sessions</li>
+              <li>Nutrition meal planning</li>
+              <li>Priority class booking</li>
+              <li>Unlimited guest passes</li>
+              <li>Exclusive member events</li>
+            </ul>
+            <button class="btn btn-outline">Go Elite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   </div>
+
+</section>
+<section class="game-section">
+  <div class="section-content">
+    <div class="content-wrapper">
+      <h1 class="section-title">Brain Games</h1>
+      <p class="section-description">Challenge your reflexes and perception with these mind-bending games.</p>
+      
+      <div class="button-group">
+        <button class="action-btn" data-panel="padel-game">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.573,19.665A3.269,3.269,0,0,1,2,15.484l.751-.75A11.648,11.648,0,0,0,5.938,7.689,7.556,7.556,0,0,1,20.983,9.067,1.018,1.018,0,0,1,19.918,10a1,1,0,0,1-.93-1.065A5.556,5.556,0,0,0,7.925,7.916,13.625,13.625,0,0,1,4.163,16.15l-.751.75A1.272,1.272,0,0,0,3.2,18.5a1.188,1.188,0,0,0,1.812.157l.712-.71a14.318,14.318,0,0,1,2.768-2.164A1,1,0,1,1,9.512,17.5a12.294,12.294,0,0,0-2.38,1.863l-.712.71a3.188,3.188,0,0,1-4.847-.4ZM23,17a6,6,0,1,1-6-6A6.006,6.006,0,0,1,23,17Zm-2,0a4,4,0,1,0-4,4A4,4,0,0,0,21,17Z"></path>
+          </svg>
+          <span>Padel Challenge</span>
+        </button>
+        
+        <button class="action-btn" data-panel="color-game">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 12.5001C14 13.3285 13.3284 14.0001 12.5 14.0001C11.6716 14.0001 11 13.3285 11 12.5001C11 11.6717 11.6716 11.0001 12.5 11.0001C13.3284 11.0001 14 11.6717 14 12.5001Z"></path>
+            <path d="M16.5 10.0001C17.3284 10.0001 18 9.32854 18 8.50011C18 7.67169 17.3284 7.00011 16.5 7.00011C15.6716 7.00011 15 7.67169 15 8.50011C15 9.32854 15.6716 10.0001 16.5 10.0001Z"></path>
+            <path d="M13 6.50011C13 7.32854 12.3284 8.00011 11.5 8.00011C10.6716 8.00011 10 7.32854 10 6.50011C10 5.67169 10.6716 5.00011 11.5 5.00011C12.3284 5.00011 13 5.67169 13 6.50011Z"></path>
+            <path d="M7.50001 12.0001C8.32844 12.0001 9.00001 11.3285 9.00001 10.5001C9.00001 9.67169 8.32844 9.00011 7.50001 9.00011C6.67158 9.00011 6.00001 9.67169 6.00001 10.5001C6.00001 11.3285 6.67158 12.0001 7.50001 12.0001Z"></path>
+            <path d="M14 17.5001C14 18.3285 13.3284 19.0001 12.5 19.0001C11.6716 19.0001 11 18.3285 11 17.5001C11 16.6717 11.6716 16.0001 12.5 16.0001C13.3284 16.0001 14 16.6717 14 17.5001Z"></path>
+            <path d="M7.50001 17.0001C8.32844 17.0001 9.00001 16.3285 9.00001 15.5001C9.00001 14.6717 8.32844 14.0001 7.50001 14.0001C6.67158 14.0001 6.00001 14.6717 6.00001 15.5001C6.00001 16.3285 6.67158 17.0001 7.50001 17.0001Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5017 1.02215C15.4049 0.791746 19.5636 2.32444 21.8087 5.41131C22.5084 6.37324 22.8228 7.63628 22.6489 8.83154C22.471 10.054 21.7734 11.2315 20.4472 11.8945C19.6389 12.2987 18.7731 12.9466 18.2401 13.668C17.7158 14.3778 17.6139 14.9917 17.8944 15.5529C18.4231 16.6102 18.8894 17.9257 18.8106 19.1875C18.7699 19.8375 18.5828 20.4946 18.1664 21.0799C17.7488 21.6667 17.1448 22.1192 16.3714 22.4286C14.6095 23.1333 12.6279 23.1643 10.8081 22.8207C8.98579 22.4765 7.24486 21.7421 5.92656 20.8194C4.00568 19.4748 2.47455 17.6889 1.71371 15.4464C0.9504 13.1965 0.995912 10.5851 2.06024 7.65803C3.64355 3.30372 7.56248 1.25469 11.5017 1.02215ZM11.6196 3.01868C8.26589 3.21665 5.18483 4.9176 3.93984 8.34149C3.00414 10.9148 3.01388 13.0536 3.60768 14.8038C4.20395 16.5613 5.42282 18.0255 7.07347 19.1809C8.14405 19.9303 9.6169 20.5604 11.1792 20.8554C12.7442 21.151 14.3181 21.0959 15.6286 20.5716C16.308 20.2999 16.7678 19.8099 16.8145 19.0627C16.8606 18.3245 16.5769 17.3901 16.1056 16.4473C15.3639 14.9639 15.8542 13.5318 16.6315 12.4796C17.4002 11.4391 18.5455 10.6093 19.5528 10.1057C20.2266 9.76878 20.5747 9.19623 20.6697 8.54355C20.7686 7.86365 20.5831 7.12638 20.1913 6.58769C18.4364 4.17486 15.0093 2.81858 11.6196 3.01868Z"></path>
+          </svg>
+          <span>Color Confusion</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Padel Game Panel -->
+ 
+</section>
+  <!-- Join Section -->
+  <!-- Replace your Join Our Community section with this -->
+<section class="section"   class="tall-section">
+               <div class="section-content">
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Get in touch with our team</p>
+    </div>
+    
+    <div class="section-content">
+      <div class="contact-grid">
+        <!-- Contact Form (Left Side) -->
+        <div class="contact-form">
+          <form id="contactForm">  
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Contact Info (Right Side) -->
+        <div class="contact-info">
+          <!-- Compact Contact Items -->
+          <div class="contact-items-compact">
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <div>
+                <h4>Location</h4>
+                <p>123 Fitness St, City</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+              </svg>
+              <div>
+                <h4>Phone</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <div>
+                <h4>Email</h4>
+                <p>contact@fitness.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+              <div>
+                <h4>Hours</h4>
+                <p>Mon-Fri: 6AM-10PM<br>Weekends: 8AM-8PM</p>
+              </div>
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="social-links">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="youtube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M23.498 6.186a3.003 3.003 0 0 0-2.095-2.095C19.543 3.6 12 3.6 12 3.6s-7.542 0-9.403.491A3.003 3.003 0 0 0 .502 6.186C.015 8.055.015 12 .015 12s0 3.945.487 5.814a3.003 3.003 0 0 0 2.095 2.095C4.458 20.4 12 20.4 12 20.4s7.543 0 9.403-.491a3.003 3.003 0 0 0 2.095-2.095c.487-1.869.487-5.814.487-5.814s0-3.945-.487-5.814zM9.609 15.6V8.4l6 3.6-6 3.6z"/>
+</svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- ESRI Satellite Map (Now larger since contact items are compact) -->
+         <div class="map-container">
+  <div id="map"></div>
+  
+  <!-- Enhanced marker with pulse effect -->
+  <div class="marker-container" id="marker">
+    <div class="static-point"></div>
+    <div class="pulse-effect"></div>
+  </div>
+  
+  <div class="map-controls">
+    <button class="map-btn" id="zoom-in" title="Zoom In">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+    </button>
+    <button class="map-btn" id="zoom-out" title="Zoom Out">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14"/>
+      </svg>
+    </button>
+    <button class="map-btn" id="toggle-layers" title="Toggle Street View">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Load Leaflet JavaScript -->
+
+        </div>
+      </div>
+    </div>
+  </div>   </div>
+
+</section>
+      <!-- Section 4 - Newsletter -->
+      <section aria-labelledby="connect-heading">
+  <div class="section-content">
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <h2 id="connect-heading">CONNECT WITH US</h2>
+        
+        <form action="/subscribe" method="POST" class="newsletter-form" aria-label="Newsletter subscription">
+          <input 
+            type="email" 
+            class="newsletter-input" 
+            placeholder="Your email address"
+            name="email"
+            required
+            aria-required="true"
+            aria-label="Email address"
+          >
+          <button type="submit" class="newsletter-btn">Sign Up</button>
+        </form>
+        
+        <div class="social-links" role="list" aria-label="Social media links">
+           
+          <a href="#" class="social-link" role="listitem" rel="noopener noreferrer" aria-label="Instagram">
+            <span>IG</span>
+          </a>
+         <a href="#" class="social-link" role="listitem" rel="noopener noreferrer" aria-label="Twitter">
+            <span>IN</span>
+          </a>
+          <a href="#" class="social-link" role="listitem" rel="noopener noreferrer" aria-label="Facebook">
+            <span>YT</span> 
+          </a>
+        </div>
+        
+       
+        
+        <div class="copyright-notice" role="contentinfo">
+          &copy; 2025 All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+    </div>
+   <div class="ai-chat-btn-container">
+    <svg class="filter" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="chatBtnFilter" color-interpolation-filters="sRGB">
+          <feImage
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            result="map"
+            href="data:image/svg+xml,%3csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient id='red' x1='100%25' y1='0%25' x2='0%25' y2='0%25'%3e%3cstop offset='0%25' stop-color='%23000'/%3e%3cstop offset='100%25' stop-color='red'/%3e%3c/linearGradient%3e%3clinearGradient id='blue' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%23000'/%3e%3cstop offset='100%25' stop-color='blue'/%3e%3c/linearGradient%3e%3c/defs%3e%3crect x='0' y='0' width='200' height='200' fill='black'%3e%3c/rect%3e%3ccircle cx='100' cy='100' r='100' fill='url(%23red)' /%3e%3ccircle cx='100' cy='100' r='100' fill='url(%23blue)' style='mix-blend-mode: difference' /%3e%3ccircle cx='100' cy='100' r='93' fill='hsl(0 0%25 50%25 / 0.93)' style='filter:blur(11px)' /%3e%3c/svg%3e"
+          ></feImage>
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="map"
+            id="redchannel"
+            xChannelSelector="R"
+            yChannelSelector="G"
+            result="dispRed"
+            scale="-180"
+          />
+          <feColorMatrix
+            in="dispRed"
+            type="matrix"
+            values="1 0 0 0 0
+                    0 0 0 0 0
+                    0 0 0 0 0
+                    0 0 0 1 0"
+            result="red"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="map"
+            id="greenchannel"
+            xChannelSelector="R"
+            yChannelSelector="G"
+            result="dispGreen"
+            scale="-170"
+          />
+          <feColorMatrix
+            in="dispGreen"
+            type="matrix"
+            values="0 0 0 0 0
+                    0 1 0 0 0
+                    0 0 0 0 0
+                    0 0 0 1 0"
+            result="green"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="map"
+            id="bluechannel"
+            xChannelSelector="R"
+            yChannelSelector="G"
+            result="dispBlue"
+            scale="-160"
+          />
+          <feColorMatrix
+            in="dispBlue"
+            type="matrix"
+            values="0 0 0 0 0
+                    0 0 0 0 0
+                    0 0 1 0 0
+                    0 0 0 1 0"
+            result="blue"
+          />   
+          <feBlend in="red" in2="green" mode="screen" result="rg" />
+          <feBlend in="rg" in2="blue" mode="screen" result="output" />
+          <feGaussianBlur in="output" stdDeviation="0.2" />
+        </filter>
+      </defs>
+    </svg>
+    <button class="ai-chat-btn" id="aiChatBtn">
+        <svg width="24" height="24" class="chat-icon" viewBox="0 0 24 24" fill="none" >
+  <!-- Flipped horizontally (mirror effect) -->
+  <g transform="scale(-1,1) translate(-24,0)">
+    <!-- Message bubble -->
+    <path d="M3 7.8C3 6.1 3 5.3 3.3 4.6C3.6 4 4 3.6 4.6 3.3C5.3 3 6.1 3 7.8 3H16.2C17.9 3 18.7 3 19.4 3.3C19.9 3.6 20.4 4 20.7 4.6C21 5.3 21 6.1 21 7.8V13.2C21 14.9 21 15.7 20.7 16.4C20.4 16.9 19.9 17.4 19.4 17.7C18.7 18 17.9 18 16.2 18H9.7C9.1 18 8.7 18 8.4 18.1C8.2 18.1 7.9 18.2 7.7 18.3C7.4 18.5 7.2 18.7 6.7 19.1L4.3 21C3.9 21.3 3.7 21.5 3.5 21.5C3.3 21.5 3.2 21.4 3.1 21.3C3 21.1 3 20.9 3 20.3V7.8Z" 
+          fill="white" stroke="#fff" stroke-width="1.5"/>
+    <!-- Smile -->
+    <path d="M8.5 12.5C8.5 12.5 9.8 14 12 14C14.2 14 15.5 12.5 15.5 12.5" 
+          stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
+    </button>
+  </div>
+  <!-- Padel Game Panel -->
+<!-- Padel Game Panel -->
+<div class="panel-overlay" id="padel-game">
+  <div class="panel-content game-panel">
+    <div class="game-top-controls">
+      <button id="padelRestart" class="icon-btn" title="Restart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4V9H4.58152M19.9381 11C19.446 7.05369 16.0796 4 12 4C8.64262 4 5.76829 6.06817 4.58152 9M4.58152 9H9M20 20V15H19.4185M19.4185 15C18.2317 17.9318 15.3574 20 12 20C7.92038 20 4.55399 16.9463 4.06189 13M19.4185 15H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button id="padelClose" class="icon-btn" title="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <h2>Padel Challenge</h2>
+    <p>Bounce the ball with your paddle and break all the blocks!</p>
+    <div class="panel-body">
+      <div class="canvas-container">
+        <canvas id="padelCanvas"></canvas>
+      </div>
+      <div class="game-status">
+        <div class="status-item">Score: <span id="padelScore">0</span></div>
+        <div class="status-item">Lives: <span id="padelLives">3</span></div>
+      </div>
+      <div class="game-end-screen">
+        <h3>Game Over!</h3>
+        <p>Your final score: <span id="padelFinalScore">0</span></p>
+        <button id="padelPlayAgain" class="control-btn">Play Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Color Game Panel -->
+<div class="panel-overlay" id="color-game">
+  <div class="panel-content game-panel">
+    <button class="panel-close">
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <h2>Color Confusion</h2>
+    <p>Does the text color match the word's meaning? Answer quickly!</p>
+    <div class="panel-body color-game-container">
+      <div class="game-status">
+        <div class="status-item">Score: <span id="js-score-count">0</span></div>
+        <div class="status-item">Lives: <span id="js-lives-count">3</span></div>
+      </div>
+      <div class="color-game-display">
+        <div id="js-colour-meaning" class="color-question">Is the color</div>
+        <div id="js-colour-text" class="color-text">red</div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-info">
+          <span id="js-time-left">5</span>s
+          <div id="js-feedback" class="feedback"></div>
+        </div>
+        <div class="timer-bar">
+          <div class="timer-progress" id="js-timer-bar"></div>
+        </div>
+      </div>
+      <div class="color-game-controls">
+        <button id="js-btn-yes" class="color-btn">Yes</button>
+        <button id="js-btn-no" class="color-btn">No</button>
+      </div>
+      <div class="game-end-screen">
+        <h3>Game Over!</h3>
+        <p>Your final score: <span id="final-score">0</span></p>
+        <button id="js-play-again" class="control-btn">Play Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ai-chat-panel" id="aiChatPanel">
+    <div class="chat-header">
+      <h3>AI Assistant</h3>
+      <button class="close-chat">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type your message...">
+      <button id="sendMessage">Send</button>
+    </div>
+  </div> 
+<div class="notification-btn">
+  <svg class="bell-icon" viewBox="0 0 24 24">
+    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+    <circle class="notification-dot" cx="18" cy="5" r="3" fill="red"/>
+  </svg>
+</div>
+
+<div class="notification-panel">
+  <div class="notification-header">
+    <h3>Notifications</h3>
+    <button class="close-panel">&times;</button>
+  </div>
+  <div class="notification-content">
+    <div class="notification-slide active">
+      <p>New boxing classes available every Monday and Wednesday at 7PM</p>
+    </div>
+    <div class="notification-slide">
+      <p>Swimming pool will be closed for maintenance on June 15</p>
+    </div>
+    <div class="notification-slide">
+      <p>Special karate workshop this Saturday at 10AM</p>
+    </div>
+  </div>
+  <div class="notification-nav">
+    <!-- Changed classes to match JavaScript selectors -->
+    <button class="nav-arrow prev">&larr;</button>
+    <span class="slide-counter">1/3</span>
+    <button class="nav-arrow next">&rarr;</button>
+  </div>
+</div>
+<div class="panel-overlay-not"></div>
+  
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+
+  
+    <script src="script.js" defer></script>
+  <script src="coach.js" defer></script>
+  <script src="counter.js" defer></script>
+  <script src="email.js" defer></script>
+  <script src="game.js" defer></script>
+  <script src="join.js" defer></script>
+  <script src="logo.js" defer></script>
+  <script src="notification.js" defer></script>
+  <script src="schedul.js" defer></script>
+    <script src="scrolle.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="career.js" defer></script>
+    <script src="careers.js" defer></script>
+    <script src="carer.js" defer></script>
+    <script src="map.js" defer></script>
+    <script src="scrollimage.js" defer></script>
+
+</body>
+</html>  
