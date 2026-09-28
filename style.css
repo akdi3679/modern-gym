@@ -5153,3 +5153,386 @@ animation: shine 1.5s ease-out forwards;
     min-height: 200px !important;
   }
 }
+
+/* ========================================= */
+/* ===== COMPREHENSIVE MOBILE FIXES ===== */
+/* ========================================= */
+@media (max-width: 768px) {
+  
+  /* FIX 1: Hero text overflow - make it fit screen */
+  .hero-title {
+    font-size: 2.5rem !important;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-message {
+    font-size: 12px !important;
+    max-width: 150px;
+    left: 10px;
+  }
+  
+  /* FIX 2: Navbar overlap - add padding to all sections */
+  .sections-container > section {
+    padding-top: 80px !important;
+  }
+  
+  .section-content {
+    padding-top: 0;
+  }
+  
+  /* FIX 3: Gallery images - force visible on mobile */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+    width: 80px !important;
+    height: 250px !important;
+  }
+  
+  .gallery-img:nth-child(1) {
+    left: 5% !important;
+    top: 15% !important;
+  }
+  
+  .gallery-img:nth-child(2) {
+    left: 35% !important;
+    top: 5% !important;
+  }
+  
+  .gallery-img:nth-child(3) {
+    left: 65% !important;
+    top: 15% !important;
+  }
+  
+  .gallery-text-section {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .gallery-text-section h2 {
+    font-size: 24px;
+  }
+  
+  .gallery-text-section p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  /* FIX 4: Smooth scroll on mobile - disable custom scroll hijack */
+  .sections-container {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    transform: none !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .sections-container > section {
+    height: auto !important;
+    min-height: 100vh;
+    transform: none !important;
+  }
+  
+  /* FIX 5: Chat button - fix touch handling */
+  .ai-chat-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .ai-chat-btn-container {
+    touch-action: manipulation;
+  }
+  
+  /* FIX 6: Cards responsive */
+  .card {
+    width: 280px !important;
+    height: 380px !important;
+  }
+  
+  .card-text-section {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .card-text-section h2 {
+    font-size: 24px;
+  }
+  
+  /* FIX 7: Menu overlay mobile */
+  .menu-overlay {
+    width: 85% !important;
+  }
+  
+  .menu-item {
+    font-size: 20px;
+  }
+  
+  /* FIX 8: Newsletter mobile */
+  .newsletter-content {
+    padding: 20px;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 28px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    width: 100% !important;
+  }
+  
+  .newsletter-btn {
+    width: 100% !important;
+  }
+  
+  /* FIX 9: Contact section mobile */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .contact-items-compact {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .map-container {
+    height: 250px;
+  }
+  
+  /* FIX 10: Training section mobile */
+  .training-section .section-content {
+    padding: 20px;
+  }
+  
+  .class-categories {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  /* FIX 11: Schedule mobile */
+  .schedule-container {
+    overflow-x: auto;
+  }
+  
+  .days-header {
+    min-width: 600px;
+  }
+  
+  /* FIX 12: Pricing mobile */
+  .pricing-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    padding: 20px;
+  }
+  
+  /* FIX 13: Counter section mobile */
+  .counter-stats {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+  
+  .counter-card {
+    padding: 20px;
+  }
+  
+  /* FIX 14: Game section mobile */
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* FIX 15: Panels mobile */
+  .panel-content {
+    width: 95% !important;
+    max-width: 95% !important;
+    padding: 1.5rem !important;
+  }
+  
+  .panel-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* FIX 16: Notification panel mobile */
+  .notification-panel {
+    width: 100% !important;
+    right: -100% !important;
+  }
+  
+  .notification-panel.open {
+    right: 0 !important;
+  }
+  
+  /* FIX 17: Career page mobile */
+  .career-page .hero {
+    padding: 0 20px;
+  }
+  
+  .hero-line1,
+  .hero-line2 {
+    font-size: 2rem !important;
+  }
+  
+  .section-title-car {
+    font-size: 2rem !important;
+  }
+  
+  .sliding-text {
+    font-size: 3rem !important;
+  }
+  
+  .sticky-card {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh;
+    padding: 50px 20px !important;
+  }
+  
+  .certificate-carousel {
+    height: auto !important;
+    min-height: 100vh;
+  }
+  
+  .certificate-card {
+    width: 280px !important;
+    height: 200px !important;
+  }
+  
+  .certificate-img {
+    height: 200px !important;
+  }
+  
+  /* FIX 18: Footer mobile */
+  .footer-big-text {
+    font-size: 3rem !important;
+  }
+  
+  .footer-contacts {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* FIX 19: Loading screen mobile */
+  .svg-container {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  /* FIX 20: General spacing fixes */
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .section-header {
+    padding: 20px !important;
+  }
+  
+  /* FIX 21: Coach slider mobile */
+  .slider-content-container {
+    width: 90% !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+  
+  .coach-image-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    margin-bottom: 20px;
+  }
+  
+  .coach-stats {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* FIX 22: Menu carousel mobile */
+  .menu-item-menu {
+    min-width: 200px !important;
+  }
+  
+  .menu-item-image {
+    height: 150px !important;
+  }
+  
+  /* FIX 23: Join form mobile */
+  .join-container {
+    padding: 0 10px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .gallery-img {
+    width: 70px !important;
+    height: 200px !important;
+  }
+  
+  .card {
+    width: 250px !important;
+    height: 340px !important;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 24px;
+  }
+  
+  .footer-big-text {
+    font-size: 2.5rem !important;
+  }
+  
+  .certificate-card {
+    width: 240px !important;
+    height: 170px !important;
+  }
+  
+  .certificate-img {
+    height: 170px !important;
+  }
+}

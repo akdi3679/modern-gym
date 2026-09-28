@@ -583,7 +583,29 @@ function initChatButton() {
     document.addEventListener('mouseup', endDrag);
     document.addEventListener('touchend', endDrag); 
     // Chat functionality
-    chatBtn.addEventListener('click', function(e) {
+    // Mobile touch fix - prevent drag from blocking click
+let touchStartTime = 0;
+let touchMoved = false;
+
+chatBtn.addEventListener('touchstart', function(e) {
+  touchStartTime = Date.now();
+  touchMoved = false;
+}, { passive: true });
+
+chatBtn.addEventListener('touchmove', function(e) {
+  touchMoved = true;
+}, { passive: true });
+
+chatBtn.addEventListener('touchend', function(e) {
+  const touchDuration = Date.now() - touchStartTime;
+  // If it was a quick tap (not a drag), trigger click
+  if (touchDuration < 200 && !touchMoved) {
+    chatPanel.classList.toggle('show');
+    chatBtn.style.opacity = chatPanel.classList.contains('show') ? '0' : '1';
+  }
+});
+
+chatBtn.addEventListener('click', function(e) {
         if (!isDragging) {
             chatPanel.classList.toggle('show');
             chatBtn.style.opacity = chatPanel.classList.contains('show') ? '0' : '1';
@@ -649,3 +671,21 @@ function initChatButton() {
       // Call this whenever section changes
       updateActiveMenuItem(); 
 });
+
+
+// Mobile scroll fix - disable custom scroll hijack on mobile
+(function() {
+  if (window.innerWidth <= 768) {
+    // Remove any transform-based scrolling on mobile
+    const container = document.getElementById('sectionsContainer');
+    if (container) {
+      container.style.transform = 'none';
+      container.style.height = 'auto';
+      container.style.overflow = 'visible';
+    }
+    
+    // Allow natural scrolling
+    document.body.style.overflow = 'auto';
+    document.documentElement.style.overflow = 'auto';
+  }
+})();
