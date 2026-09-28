@@ -5078,21 +5078,7 @@ animation: shine 1.5s ease-out forwards;
 
 
 /* ========================================= */
-/* ===== MOBILE & IMAGE FIXES ===== */
-/* ========================================= */
-@media (max-width: 768px) {
-  
-  /* Fallback for older browsers that don't support 100dvh */
-  @supports not (height: 100dvh) {
-    .sections-container,
-    .section-content,
-    .image-container,
-    .hero,
-    .certificate-carousel {
-      height: 100vh !important;
-      min-height: 100vh !important;
-    }
-  }
+
 
   /* Fix image container that gets pushed off-screen on mobile */
   .image-container {
@@ -5155,348 +5141,7 @@ animation: shine 1.5s ease-out forwards;
 }
 
 /* ========================================= */
-/* ===== COMPREHENSIVE MOBILE FIXES ===== */
-/* ========================================= */
-@media (max-width: 768px) {
-  
-  /* FIX 1: Hero text overflow - make it fit screen */
-  .hero-title {
-    font-size: 2.5rem !important;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 0 20px;
-  }
-  
-  .hero-message {
-    font-size: 12px !important;
-    max-width: 150px;
-    left: 10px;
-  }
-  
-  .section-content {
-    padding-top: 0;
-  }
-  
-  /* FIX 3: Gallery images - force visible on mobile */
-  .gallery-img {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translate(0, 0) !important;
-    width: 80px !important;
-    height: 250px !important;
-  }
-  
-  .gallery-img:nth-child(1) {
-    left: 5% !important;
-    top: 15% !important;
-  }
-  
-  .gallery-img:nth-child(2) {
-    left: 35% !important;
-    top: 5% !important;
-  }
-  
-  .gallery-img:nth-child(3) {
-    left: 65% !important;
-    top: 15% !important;
-  }
-  
-  .gallery-text-section {
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-  }
-  
-  .gallery-text-section h2 {
-    font-size: 24px;
-  }
-  
-  .gallery-text-section p {
-    font-size: 14px;
-    max-width: 100%;
-  }
-  
-  /* FIX 4: Smooth scroll on mobile - disable custom scroll hijack */
-  .sections-container {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-    transform: none !important;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .sections-container > section {
-    height: auto !important;
-    min-height: 100vh;
-    transform: none !important;
-  }
-  
-  /* FIX 5: Chat button - fix touch handling */
-  .ai-chat-btn {
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  .ai-chat-btn-container {
-    touch-action: manipulation;
-  }
-  
-  /* FIX 6: Cards responsive */
-  .card {
-    width: 280px !important;
-    height: 380px !important;
-  }
-  
-  .card-text-section {
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .card-text-section h2 {
-    font-size: 24px;
-  }
-  
-  /* FIX 7: Menu overlay mobile */
-  .menu-overlay {
-    width: 85% !important;
-  }
-  
-  .menu-item {
-    font-size: 20px;
-  }
-  
-  /* FIX 8: Newsletter mobile */
-  .newsletter-content {
-    padding: 20px;
-  }
-  
-  .newsletter-content h2 {
-    font-size: 28px;
-  }
-  
-  .newsletter-form {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .newsletter-input {
-    width: 100% !important;
-  }
-  
-  .newsletter-btn {
-    width: 100% !important;
-  }
-  
-  /* FIX 9: Contact section mobile */
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-  
-  .contact-items-compact {
-    grid-template-columns: 1fr !important;
-  }
-  
-  .map-container {
-    height: 250px;
-  }
-  
-  /* FIX 10: Training section mobile */
-  .training-section .section-content {
-    padding: 20px;
-  }
-  
-  .class-categories {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .category-btn {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-  
-  /* FIX 11: Schedule mobile */
-  .schedule-container {
-    overflow-x: auto;
-  }
-  
-  .days-header {
-    min-width: 600px;
-  }
-  
-  /* FIX 12: Pricing mobile */
-  .pricing-tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .pricing-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-  
-  .pricing-card {
-    padding: 20px;
-  }
-  
-  /* FIX 13: Counter section mobile */
-  .counter-stats {
-    grid-template-columns: 1fr !important;
-    gap: 15px;
-  }
-  
-  .counter-card {
-    padding: 20px;
-  }
-  
-  /* FIX 14: Game section mobile */
-  .button-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .action-btn {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  /* FIX 15: Panels mobile */
-  .panel-content {
-    width: 95% !important;
-    max-width: 95% !important;
-    padding: 1.5rem !important;
-  }
-  
-  .panel-content h2 {
-    font-size: 1.5rem !important;
-  }
-  
-  /* FIX 16: Notification panel mobile */
-  .notification-panel {
-    width: 100% !important;
-    right: -100% !important;
-  }
-  
-  .notification-panel.open {
-    right: 0 !important;
-  }
-  
-  /* FIX 17: Career page mobile */
-  .career-page .hero {
-    padding: 0 20px;
-  }
-  
-  .hero-line1,
-  .hero-line2 {
-    font-size: 2rem !important;
-  }
-  
-  .section-title-car {
-    font-size: 2rem !important;
-  }
-  
-  .sliding-text {
-    font-size: 3rem !important;
-  }
-  
-  .sticky-card {
-    position: relative !important;
-    height: auto !important;
-    min-height: 100vh;
-    padding: 50px 20px !important;
-  }
-  
-  .certificate-carousel {
-    height: auto !important;
-    min-height: 100vh;
-  }
-  
-  .certificate-card {
-    width: 280px !important;
-    height: 200px !important;
-  }
-  
-  .certificate-img {
-    height: 200px !important;
-  }
-  
-  /* FIX 18: Footer mobile */
-  .footer-big-text {
-    font-size: 3rem !important;
-  }
-  
-  .footer-contacts {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .footer-center {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  /* FIX 19: Loading screen mobile */
-  .svg-container {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  
-  /* FIX 20: General spacing fixes */
-  .section-title {
-    font-size: 1.8rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 0.9rem !important;
-  }
-  
-  .section-header {
-    padding: 20px !important;
-  }
-  
-  /* FIX 21: Coach slider mobile */
-  .slider-content-container {
-    width: 90% !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
-  }
-  
-  .coach-image-container {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    width: 100% !important;
-    height: 200px !important;
-    margin-bottom: 20px;
-  }
-  
-  .coach-stats {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* FIX 22: Menu carousel mobile */
-  .menu-item-menu {
-    min-width: 200px !important;
-  }
-  
-  .menu-item-image {
-    height: 150px !important;
-  }
-  
-  /* FIX 23: Join form mobile */
-  .join-container {
-    padding: 0 10px;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr !important;
-  }
-}
+
 
 /* Extra small devices */
 @media (max-width: 480px) {
@@ -5829,31 +5474,160 @@ animation: shine 1.5s ease-out forwards;
 }
 
 /* ========================================= */
-/* ===== MOBILE SCROLL SMOOTHNESS FIX ===== */
+
+
+/* ========================================= */
+/* ===== SCROLL SYSTEM (REBUILT) ===== */
+/* ========================================= */
+
+/* Main scroll container */
+.sections-container {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  gap: 150px;
+  overflow: hidden;
+}
+
+/* Each section is exactly viewport height */
+.sections-container > section {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-color: #000;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Tall sections can scroll internally */
+.tall-section {
+  height: auto !important;
+  min-height: 100vh;
+}
+
+.tall-section .section-content {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tall-section .section-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .sections-container {
+    gap: 80px;
+  }
+  
+  .sections-container > section {
+    min-height: 100vh;
+    height: 100vh;
+  }
+  
+  .tall-section {
+    height: auto !important;
+    min-height: 100vh;
+  }
+  
+  .tall-section .section-content {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+/* ========================================= */
+/* ===== MOBILE FIXES ===== */
 /* ========================================= */
 @media (max-width: 768px) {
-  /* Ensure sections are exactly viewport height for smooth JS transitions */
-  .sections-container > section {
-    min-height: 100vh !important;
-    height: 100vh !important;
-    box-sizing: border-box;
+  /* Hero text */
+  .hero-title {
+    font-size: 2.5rem !important;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 20px;
+    white-space: normal !important;
   }
   
-  /* Prevent any overflow that causes seeing two sections */
-  .sections-container {
-    overflow: hidden !important;
-    gap: 0 !important;
+  .hero-message {
+    font-size: 12px !important;
+    max-width: 150px;
+    left: 10px;
   }
   
-  /* Ensure content inside tall sections scrolls naturally on touch */
-  .section-content {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    height: 100vh !important;
+  /* Gallery images */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+    width: 80px !important;
+    height: 200px !important;
   }
   
-  /* Hide scrollbars for section content */
-  .section-content::-webkit-scrollbar {
-    display: none;
+  .gallery-img:nth-child(1) {
+    left: 10% !important;
+    top: 20% !important;
+  }
+  
+  .gallery-img:nth-child(2) {
+    left: 40% !important;
+    top: 10% !important;
+  }
+  
+  .gallery-img:nth-child(3) {
+    left: 70% !important;
+    top: 20% !important;
+  }
+  
+  /* Chat button */
+  .ai-chat-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Cards */
+  .card {
+    width: 280px !important;
+    height: 380px !important;
+  }
+  
+  /* Menu */
+  .menu-overlay {
+    width: 85% !important;
+  }
+  
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .newsletter-input,
+  .newsletter-btn {
+    width: 100% !important;
+  }
+  
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Footer */
+  .footer-big-text {
+    font-size: 3rem !important;
+  }
+  
+  .footer-contacts {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 }
