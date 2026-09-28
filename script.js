@@ -726,145 +726,97 @@ chatBtn.addEventListener('click', function(e) {
     }
 })();
 
-// =========================================
-// SCROLL SYSTEM (REBUILT)
-// =========================================
 
+
+// =========================================
+// SCROLL SYSTEM (Desktop only - mobile uses CSS scroll-snap)
+// =========================================
 (function() {
+  // Skip on mobile - CSS scroll-snap handles it natively
+  if (window.innerWidth <= 768) return;
+  
   const container = document.getElementById('sectionsContainer');
   if (!container) return;
   
   const sections = Array.from(container.querySelectorAll('section'));
   let currentIndex = 0;
   let isAnimating = false;
-  let touchStartY = 0;
-  let touchEndY = 0;
-  let lastScrollTime = 0;
-  const scrollThreshold = 50;
   const animationDuration = 800;
   
-  // Check if current section is scrollable
   function isSectionScrollable(section) {
     const content = section.querySelector('.section-content');
     if (!content) return false;
-    return content.scrollHeight > content.clientHeight;
+    return content.scrollHeight > content.clientHeight + 5;
   }
   
-  // Check if section is at top or bottom
   function isSectionAtEdge(section, direction) {
     const content = section.querySelector('.section-content');
     if (!content) return true;
-    
-    if (direction === 'up') {
-      return content.scrollTop <= 0;
-    } else if (direction === 'down') {
-      return content.scrollTop + content.clientHeight >= content.scrollHeight - 1;
-    }
+    if (direction === 'up') return content.scrollTop <= 1;
+    if (direction === 'down') return content.scrollTop + content.clientHeight >= content.scrollHeight - 2;
     return true;
   }
   
-  // Scroll to section
   function scrollToSection(index) {
     if (index < 0 || index >= sections.length || isAnimating) return;
-    
     isAnimating = true;
     currentIndex = index;
     
-    // Calculate transform
     const sectionHeight = window.innerHeight;
     const gap = 150;
     const offset = index * (sectionHeight + gap);
     
     container.style.transform = 'translateY(-' + offset + 'px)';
     
-    // Update active section
-    sections.forEach((section, i) => {
-      if (i === index) {
-        section.classList.add('active');
-      } else {
-        section.classList.remove('active');
-      }
+    sections.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
     });
     
-    // Trigger animations for new section
     if (typeof triggerSectionAnimations === 'function') {
       triggerSectionAnimations(index);
     }
     
-    setTimeout(() => {
-      isAnimating = false;
-    }, animationDuration);
+    setTimeout(() => { isAnimating = false; }, animationDuration);
   }
   
-  // Handle scroll
   function handleScroll(direction) {
-    const now = Date.now();
-    if (now - lastScrollTime < 100) return; // Debounce
-    lastScrollTime = now;
-    
     const currentSection = sections[currentIndex];
-    const isScrollable = isSectionScrollable(currentSection);
     
-    if (isScrollable) {
-      // Check if we're at the edge
+    if (isSectionScrollable(currentSection)) {
       if (direction === 'down' && isSectionAtEdge(currentSection, 'down')) {
         scrollToSection(currentIndex + 1);
       } else if (direction === 'up' && isSectionAtEdge(currentSection, 'up')) {
         scrollToSection(currentIndex - 1);
       }
-      // Otherwise, let the internal scroll happen naturally
     } else {
-      // Non-scrollable section, just move to next/prev
-      if (direction === 'down') {
-        scrollToSection(currentIndex + 1);
-      } else if (direction === 'up') {
-        scrollToSection(currentIndex - 1);
-      }
+      if (direction === 'down') scrollToSection(currentIndex + 1);
+      else if (direction === 'up') scrollToSection(currentIndex - 1);
     }
   }
   
-  // Mouse wheel
+  // Mouse wheel (desktop only)
+  let wheelTimeout;
   container.addEventListener('wheel', (e) => {
     e.preventDefault();
-    const direction = e.deltaY > 0 ? 'down' : 'up';
-    handleScroll(direction);
+    clearTimeout(wheelTimeout);
+    wheelTimeout = setTimeout(() => {
+      handleScroll(e.deltaY > 0 ? 'down' : 'up');
+    }, 50);
   }, { passive: false });
   
-  // Touch events
-  container.addEventListener('touchstart', (e) => {
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-  
-  container.addEventListener('touchend', (e) => {
-    touchEndY = e.changedTouches[0].clientY;
-    const diff = touchStartY - touchEndY;
-    
-    if (Math.abs(diff) > scrollThreshold) {
-      const direction = diff > 0 ? 'down' : 'up';
-      handleScroll(direction);
-    }
-  }, { passive: true });
-  
-  // Keyboard navigation
+  // Keyboard
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
-      e.preventDefault();
-      handleScroll('down');
-    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
-      e.preventDefault();
-      handleScroll('up');
-    }
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); handleScroll('down'); }
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); handleScroll('up'); }
   });
   
-  // Initialize
+  // Init
   scrollToSection(0);
   
-  // Handle resize
-  let resizeTimeout;
+  // Resize
+  let resizeTimer;
   window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      scrollToSection(currentIndex);
-    }, 250);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => scrollToSection(currentIndex), 250);
   });
 })();

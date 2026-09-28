@@ -5178,7 +5178,6 @@ animation: shine 1.5s ease-out forwards;
 }
 
 /* ========================================= */
-/* ===== MOBILE FIXES ===== */
 /* ========================================= */
 @media (max-width: 768px) {
   
@@ -5544,7 +5543,6 @@ animation: shine 1.5s ease-out forwards;
 }
 
 /* ========================================= */
-/* ===== MOBILE FIXES ===== */
 /* ========================================= */
 @media (max-width: 768px) {
   /* Hero text */
@@ -5630,4 +5628,116 @@ animation: shine 1.5s ease-out forwards;
     gap: 20px;
     text-align: center;
   }
+}
+
+/* ========================================= */
+/* ===== MOBILE SNAP SCROLL (CSS Native) ===== */
+/* ========================================= */
+@media (max-width: 768px) {
+  
+  /* Switch from JS transform to CSS scroll-snap on mobile */
+  .sections-container {
+    transform: none !important;
+    transition: none !important;
+    height: 100vh !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0 !important;
+    display: block !important;
+  }
+  
+  /* Each section snaps to viewport */
+  .sections-container > section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    width: 100vw !important;
+    transform: none !important;
+    overflow: hidden;
+  }
+  
+  /* Tall sections: allow internal scroll but still snap */
+  .tall-section {
+    height: auto !important;
+    min-height: 100vh !important;
+    scroll-snap-align: start;
+  }
+  
+  .tall-section .section-content {
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .sections-container::-webkit-scrollbar {
+    display: none;
+  }
+  .sections-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Hero text fix */
+  .hero-title {
+    font-size: 2.5rem !important;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 20px;
+    white-space: normal !important;
+  }
+  
+  .hero-message {
+    font-size: 12px !important;
+    max-width: 150px;
+    left: 10px;
+  }
+  
+  /* Gallery images visible on mobile */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+    width: 80px !important;
+    height: 200px !important;
+  }
+  
+  .gallery-img:nth-child(1) { left: 10% !important; top: 20% !important; }
+  .gallery-img:nth-child(2) { left: 40% !important; top: 10% !important; }
+  .gallery-img:nth-child(3) { left: 70% !important; top: 20% !important; }
+  
+  /* Chat button touch fix */
+  .ai-chat-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Cards */
+  .card { width: 280px !important; height: 380px !important; }
+  
+  /* Menu */
+  .menu-overlay { width: 85% !important; }
+  
+  /* Newsletter */
+  .newsletter-form { flex-direction: column; gap: 10px; }
+  .newsletter-input, .newsletter-btn { width: 100% !important; }
+  
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; }
+  
+  /* Footer */
+  .footer-big-text { font-size: 3rem !important; }
+  .footer-contacts { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+/* Extra small */
+@media (max-width: 480px) {
+  .hero-title { font-size: 2rem !important; }
+  .gallery-img { width: 70px !important; height: 160px !important; }
+  .card { width: 250px !important; height: 340px !important; }
+  .footer-big-text { font-size: 2.5rem !important; }
 }
