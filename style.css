@@ -93,7 +93,7 @@ svg {
             position: relative;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
               height: 100vh; height: 100dvh;
-              gap : 150px ; 
+              gap: 0; /* Removed gap to fix JS scroll transforms */ 
   overflow: hidden;
         }
  
@@ -5174,11 +5174,6 @@ animation: shine 1.5s ease-out forwards;
     left: 10px;
   }
   
-  /* FIX 2: Navbar overlap - add padding to all sections */
-  .sections-container > section {
-    padding-top: 80px !important;
-  }
-  
   .section-content {
     padding-top: 0;
   }
@@ -5601,7 +5596,7 @@ animation: shine 1.5s ease-out forwards;
   
   /* FIX: Navbar overlap - add padding to all sections */
   .sections-container > section {
-    padding-top: 80px !important;
+
   }
   
   /* FIX: Chat button - fix touch handling */
@@ -5830,5 +5825,35 @@ animation: shine 1.5s ease-out forwards;
   
   .footer-big-text {
     font-size: 2.5rem !important;
+  }
+}
+
+/* ========================================= */
+/* ===== MOBILE SCROLL SMOOTHNESS FIX ===== */
+/* ========================================= */
+@media (max-width: 768px) {
+  /* Ensure sections are exactly viewport height for smooth JS transitions */
+  .sections-container > section {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent any overflow that causes seeing two sections */
+  .sections-container {
+    overflow: hidden !important;
+    gap: 0 !important;
+  }
+  
+  /* Ensure content inside tall sections scrolls naturally on touch */
+  .section-content {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh !important;
+  }
+  
+  /* Hide scrollbars for section content */
+  .section-content::-webkit-scrollbar {
+    display: none;
   }
 }
