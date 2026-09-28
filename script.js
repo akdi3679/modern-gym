@@ -136,7 +136,7 @@ const observer = new IntersectionObserver((entries) => {
       triggerSectionAnimations(sectionIndex);
     }
   });
-}, { threshold: 0.3 }); // Trigger when 30% visible
+}, { threshold: 0.1, rootMargin: '100px 0px' }); // Trigger when 30% visible
 
 // Observe all sections
 sections.forEach(section => observer.observe(section));

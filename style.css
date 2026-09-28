@@ -31,7 +31,7 @@ html {
 /* Section styling */
 section {
   padding-top : 10px ; 
-  min-height: 100vh; 
+  min-height: 100vh; min-height: 100dvh; height: 100dvh; 
   position: relative;
 } 
 /* Add these styles */
@@ -92,7 +92,7 @@ svg {
             width: 100vw;
             position: relative;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-              height: 100vh;
+              height: 100vh; height: 100dvh;
               gap : 150px ; 
   overflow: hidden;
         }
@@ -100,7 +100,7 @@ svg {
         /* Section base styles */
         .sections-container > section {
             min-width: 100vw;
-            min-height: 100vh;
+            min-height: 100vh; min-height: 100dvh; height: 100dvh;
             width: 100vw;
             position: relative;
             z-index: 1;
@@ -117,7 +117,7 @@ svg {
 
 /* Content container for scrolling */
 .section-content {
-  height: 100vh; /* Viewport height */
+  height: 100vh; height: 100dvh; /* Viewport height */
   overflow-y: auto;
   padding: 20px;
 }
@@ -186,7 +186,7 @@ background: rgba(0, 0, 0, 0.7);
       left: -100%;
       width: 60%;
       max-width: 400px;
-      height: 100vh;
+      height: 100vh; height: 100dvh;
       background-color: white;
       z-index: 2000;
       display: flex;
@@ -821,7 +821,7 @@ background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   overflow: visible; /* Changed from hidden to visible */
   position: relative;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* Smoother easing */
@@ -829,7 +829,7 @@ background: rgba(0, 0, 0, 0.7);
 
 .sections-container > section {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 100vh; min-height: 100dvh; height: 100dvh;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -2651,7 +2651,7 @@ background: rgba(0, 0, 0, 0.7);
 #slider {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   overflow: hidden;
   background: #000000;
   z-index: 1;
@@ -3738,7 +3738,7 @@ animation: shine 1.5s ease-out forwards;
 }
 .game-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; min-height: 100dvh; height: 100dvh;
   background: white;
   position: relative;
   background : black ; 
@@ -3949,7 +3949,7 @@ animation: shine 1.5s ease-out forwards;
   display: block;
 }
 #padel-game .panel-content {
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   padding: 1rem 1.5rem 1.5rem;
   box-sizing: border-box;
   display: flex;
@@ -4371,7 +4371,7 @@ animation: shine 1.5s ease-out forwards;
  /*carerr //////////////////////////*/
  
   .hero {
-            height: 100vh;
+            height: 100vh; height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4400,13 +4400,13 @@ animation: shine 1.5s ease-out forwards;
         background-color: #ddd;
         z-index: 2;
         position: relative; /* Add this */
-        height: 100vh; /* Add this */
+        height: 100vh; height: 100dvh; /* Add this */
     }
    
     
     .image-container {
         width: 100%;
-        height: 100vh;
+        height: 100vh; height: 100dvh;
         position: absolute;
         top: -30vh;
         left: 0;
@@ -4580,7 +4580,7 @@ animation: shine 1.5s ease-out forwards;
 }
 
 .sticky-card {
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   padding: 100px 50px;
   position: sticky !important ;
   top: 0;
@@ -4596,7 +4596,7 @@ animation: shine 1.5s ease-out forwards;
   .sticky-card {
     position: relative;
     height: auto;
-    min-height: 100vh;
+    min-height: 100vh; min-height: 100dvh; height: 100dvh;
   }
   
   .fifth-section {
@@ -4656,7 +4656,7 @@ animation: shine 1.5s ease-out forwards;
          .sixth-section {
         background: black;
         color: white;
-        height: 100vh;
+        height: 100vh; height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -4832,7 +4832,7 @@ animation: shine 1.5s ease-out forwards;
             .sticky-card {
                 position: relative;
                 height: auto;
-                min-height: 100vh;
+                min-height: 100vh; min-height: 100dvh; height: 100dvh;
             }
 
             .footer-big-text {
@@ -4854,7 +4854,7 @@ animation: shine 1.5s ease-out forwards;
 
 .certificate-carousel {
   width: 100%;
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   background: #000;
   position: relative;
   overflow: hidden;
@@ -5070,8 +5070,86 @@ animation: shine 1.5s ease-out forwards;
   
   .certificate-carousel {
     height: auto;
-    min-height: 100vh;
+    min-height: 100vh; min-height: 100dvh; height: 100dvh;
   }
 } 
 
 
+
+
+/* ========================================= */
+/* ===== MOBILE & IMAGE FIXES ===== */
+/* ========================================= */
+@media (max-width: 768px) {
+  
+  /* Fallback for older browsers that don't support 100dvh */
+  @supports not (height: 100dvh) {
+    .sections-container,
+    .section-content,
+    .image-container,
+    .hero,
+    .certificate-carousel {
+      height: 100vh !important;
+      min-height: 100vh !important;
+    }
+  }
+
+  /* Fix image container that gets pushed off-screen on mobile */
+  .image-container {
+    top: -10vh !important; /* Less negative offset for mobile */
+  }
+  .image-container.scrolled {
+    top: 0vh !important;
+  }
+
+  /* CRITICAL: Force gallery images to show if JS observer fails on mobile */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+  }
+
+  /* Ensure background image containers don't collapse to 0 height */
+  .class-gallery {
+    min-height: 250px !important;
+  }
+  .menu-item-image {
+    height: 180px !important;
+  }
+  .class-slide {
+    min-height: 250px !important;
+  }
+
+  /* Fix certificate carousel height on mobile */
+  .certificate-carousel {
+    height: auto !important;
+    min-height: 100dvh;
+    padding: 40px 0;
+  }
+
+  /* Fix sticky cards which break on mobile touch scrolling */
+  .sticky-card {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100dvh;
+    padding: 50px 20px;
+  }
+
+  /* Ensure coach fallback images show if JS fails */
+  .fallback-images img {
+    opacity: 1 !important;
+  }
+  .fallback-images img:not(.active) {
+    display: none; /* Only show the active one */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .image-container {
+    top: -5vh !important;
+  }
+  .class-gallery, .class-slide {
+    min-height: 200px !important;
+  }
+}
