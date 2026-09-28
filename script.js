@@ -689,3 +689,44 @@ chatBtn.addEventListener('click', function(e) {
     document.documentElement.style.overflow = 'auto';
   }
 })();
+// Mobile touch fix - separate tap from drag
+let touchStartTime = 0;
+let touchMoved = false;
+
+chatBtn.addEventListener('touchstart', function(e) {
+    touchStartTime = Date.now();
+    touchMoved = false;
+}, { passive: true });
+
+chatBtn.addEventListener('touchmove', function(e) {
+    touchMoved = true;
+}, { passive: true });
+
+chatBtn.addEventListener('touchend', function(e) {
+    const touchDuration = Date.now() - touchStartTime;
+    // If it was a quick tap (not a drag), trigger click
+    if (touchDuration < 200 && !touchMoved) {
+        chatPanel.classList.toggle('show');
+        chatBtn.style.opacity = chatPanel.classList.contains('show') ? '0' : '1';
+        e.preventDefault();
+    }
+});
+
+chatBtn.addEventListener('click', function(e) {
+    if (!isDragging) {
+        chatPanel.classList.toggle('show');
+        chatBtn.style.opacity = chatPanel.classList.contains('show') ? '0' : '1';
+    }
+});
+
+// Mobile gallery image fallback - force visible if IntersectionObserver fails
+(function() {
+    if (window.innerWidth <= 768) {
+        const galleryImgs = document.querySelectorAll('.gallery-img');
+        galleryImgs.forEach(img => {
+            img.style.opacity = '1';
+            img.style.visibility = 'visible';
+            img.style.transform = 'translate(0, 0)';
+        });
+    }
+})();

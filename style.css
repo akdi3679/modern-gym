@@ -5536,3 +5536,299 @@ animation: shine 1.5s ease-out forwards;
     height: 170px !important;
   }
 }
+
+/* ========================================= */
+/* ===== MOBILE FIXES ===== */
+/* ========================================= */
+@media (max-width: 768px) {
+  
+  /* FIX: Hero text - make it fit screen */
+  .hero-title {
+    font-size: 2.5rem !important;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 20px;
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+  
+  .hero-message {
+    font-size: 12px !important;
+    max-width: 150px;
+    left: 10px;
+    bottom: 10px;
+  }
+  
+  /* FIX: Gallery images - FORCE VISIBLE on mobile */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+    width: 100px !important;
+    height: 200px !important;
+  }
+  
+  .gallery-img:nth-child(1) {
+    left: 10% !important;
+    top: 20% !important;
+  }
+  
+  .gallery-img:nth-child(2) {
+    left: 40% !important;
+    top: 10% !important;
+  }
+  
+  .gallery-img:nth-child(3) {
+    left: 70% !important;
+    top: 20% !important;
+  }
+  
+  .gallery-text-section {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .gallery-text-section h2 {
+    font-size: 24px;
+  }
+  
+  .gallery-text-section p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  /* FIX: Navbar overlap - add padding to all sections */
+  .sections-container > section {
+    padding-top: 80px !important;
+  }
+  
+  /* FIX: Chat button - fix touch handling */
+  .ai-chat-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    pointer-events: auto !important;
+  }
+  
+  .ai-chat-btn-container {
+    touch-action: manipulation;
+    pointer-events: auto !important;
+  }
+  
+  /* FIX: Cards responsive */
+  .card {
+    width: 280px !important;
+    height: 380px !important;
+  }
+  
+  .card-text-section {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .card-text-section h2 {
+    font-size: 24px;
+  }
+  
+  /* FIX: Menu overlay mobile */
+  .menu-overlay {
+    width: 85% !important;
+  }
+  
+  .menu-item {
+    font-size: 20px;
+  }
+  
+  /* FIX: Newsletter mobile */
+  .newsletter-content {
+    padding: 20px;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 28px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    width: 100% !important;
+  }
+  
+  .newsletter-btn {
+    width: 100% !important;
+  }
+  
+  /* FIX: Contact section mobile */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .contact-items-compact {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .map-container {
+    height: 250px;
+  }
+  
+  /* FIX: Training section mobile */
+  .training-section .section-content {
+    padding: 20px;
+  }
+  
+  .class-categories {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  /* FIX: Schedule mobile */
+  .schedule-container {
+    overflow-x: auto;
+  }
+  
+  .days-header {
+    min-width: 600px;
+  }
+  
+  /* FIX: Pricing mobile */
+  .pricing-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    padding: 20px;
+  }
+  
+  /* FIX: Counter section mobile */
+  .counter-stats {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+  
+  .counter-card {
+    padding: 20px;
+  }
+  
+  /* FIX: Game section mobile */
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* FIX: Panels mobile */
+  .panel-content {
+    width: 95% !important;
+    max-width: 95% !important;
+    padding: 1.5rem !important;
+  }
+  
+  .panel-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* FIX: Notification panel mobile */
+  .notification-panel {
+    width: 100% !important;
+    right: -100% !important;
+  }
+  
+  .notification-panel.open {
+    right: 0 !important;
+  }
+  
+  /* FIX: Footer mobile */
+  .footer-big-text {
+    font-size: 3rem !important;
+  }
+  
+  .footer-contacts {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* FIX: General spacing fixes */
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .section-header {
+    padding: 20px !important;
+  }
+  
+  /* FIX: Coach slider mobile */
+  .slider-content-container {
+    width: 90% !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+  
+  .coach-image-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    margin-bottom: 20px;
+  }
+  
+  .coach-stats {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .gallery-img {
+    width: 80px !important;
+    height: 160px !important;
+  }
+  
+  .card {
+    width: 250px !important;
+    height: 340px !important;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 24px;
+  }
+  
+  .footer-big-text {
+    font-size: 2.5rem !important;
+  }
+}
