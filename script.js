@@ -1068,3 +1068,127 @@ document.querySelectorAll('.menu-item').forEach(item => {
   // Expose for menu clicks
   window.scrollToSection = scrollToSection;
 })();
+
+// =========================================
+// WHEEL EVENT HANDLER - Prevents overscroll on PC
+// =========================================
+(function() {
+  const container = document.getElementById('sectionsContainer');
+  if (!container) return;
+  
+  const sections = Array.from(container.querySelectorAll('section'));
+  let currentIndex = 0;
+  let isScrolling = false;
+  let scrollCooldown = 900; // ms - prevents multiple section changes per gesture
+  
+  function scrollToSection(index) {
+    if (index < 0 || index >= sections.length || isScrolling) return;
+    
+    isScrolling = true;
+    currentIndex = index;
+    
+    // Use CSS scroll-snap by scrolling the container
+    container.scrollTo({
+      top: index * window.innerHeight,
+      behavior: 'smooth'
+    });
+    
+    // Trigger animations for new section
+    if (typeof triggerSectionAnimations === 'function') {
+      setTimeout(() => triggerSectionAnimations(index), 300);
+    }
+    
+    // Update menu
+    if (typeof updateActiveMenuItem === 'function') {
+      updateActiveMenuItem();
+    }
+    
+    // Release lock after cooldown
+    setTimeout(() => {
+      isScrolling = false;
+    }, scrollCooldown);
+  }
+  
+  // Wheel event - ONE scroll gesture = ONE section change
+  let wheelAccumulator = 0;
+  let wheelTimeout = null;
+  
+  container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (isScrolling) return;
+    
+    // Accumulate delta to determine direction
+    wheelAccumulator += e.deltaY;
+    
+    // Clear previous timeout
+    if (wheelTimeout) clearTimeout(wheelTimeout);
+    
+    // Set new timeout to process scroll after gesture ends
+    wheelTimeout = setTimeout(() => {
+      if (Math.abs(wheelAccumulator) > 30) { // Minimum threshold
+        if (wheelAccumulator > 0) {
+          scrollToSection(currentIndex + 1);
+        } else {
+          scrollToSection(currentIndex - 1);
+        }
+      }
+      wheelAccumulator = 0;
+    }, 100); // Wait 100ms for gesture to finish
+  }, { passive: false });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (isScrolling) return;
+    
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      scrollToSection(currentIndex + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      scrollToSection(currentIndex - 1);
+    }
+  });
+  
+  // Touch events for mobile
+  let touchStartY = 0;
+  container.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  
+  container.addEventListener('touchend', (e) => {
+    if (isScrolling) return;
+    
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+    
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        scrollToSection(currentIndex + 1);
+      } else {
+        scrollToSection(currentIndex - 1);
+      }
+    }
+  }, { passive: true });
+  
+  // Initialize first section
+  scrollToSection(0);
+  
+  // Handle resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      container.scrollTo({
+        top: currentIndex * window.innerHeight,
+        behavior: 'auto'
+      });
+    }, 250);
+  });
+  
+  // Expose for menu clicks
+  window.scrollToSection = scrollToSection;
+})();
+
+// Keyboard navigation
