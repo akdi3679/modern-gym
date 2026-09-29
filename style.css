@@ -5885,3 +5885,85 @@ html {
   .card { width: 250px !important; height: 340px !important; }
   .footer-big-text { font-size: 2.5rem !important; }
 }
+
+/* Mobile chat panel fix */
+@media (max-width: 768px) {
+  .ai-chat-panel {
+    position: fixed !important;
+    bottom: 90px !important;
+    right: 20px !important;
+    left: auto !important;
+    width: calc(100% - 40px) !important;
+    max-width: 320px !important;
+    height: 60vh !important;
+    max-height: 500px !important;
+  }
+}
+
+/* Force gallery images visible on mobile */
+@media (max-width: 768px) {
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+    width: 100px !important;
+    height: 200px !important;
+  }
+  
+  .gallery-img:nth-child(1) {
+    left: 10% !important;
+    top: 20% !important;
+  }
+  
+  .gallery-img:nth-child(2) {
+    left: 40% !important;
+    top: 10% !important;
+  }
+  
+  .gallery-img:nth-child(3) {
+    left: 70% !important;
+    top: 20% !important;
+  }
+}
+
+/* Mobile card consistency - match PC view */
+@media (max-width: 768px) {
+  .card {
+    width: 350px !important;
+    height: 450px !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .card-text-section {
+    position: absolute !important;
+    bottom: 40px !important;
+    right: 40px !important;
+  }
+  
+  .card-text-section h2,
+  .card-text-section p,
+  .card-text-section .btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* PC Scroll Fix - Match mobile behavior */
+.sections-container {
+  gap: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.sections-container > section {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

@@ -763,8 +763,7 @@ chatBtn.addEventListener('click', function(e) {
     currentIndex = index;
     
     const sectionHeight = window.innerHeight;
-    const gap = 150;
-    const offset = index * (sectionHeight + gap);
+    const offset = index * sectionHeight; // No gap
     
     container.style.transform = 'translateY(-' + offset + 'px)';
     
