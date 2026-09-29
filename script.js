@@ -820,3 +820,102 @@ chatBtn.addEventListener('click', function(e) {
     resizeTimer = setTimeout(() => scrollToSection(currentIndex), 250);
   });
 })();
+
+// =========================================
+// SCROLL HANDLER (Works with CSS scroll-snap)
+// =========================================
+(function() {
+  const container = document.getElementById('sectionsContainer');
+  if (!container) return;
+  
+  const sections = Array.from(container.querySelectorAll('section'));
+  let currentIndex = 0;
+  
+  // Update current section based on scroll position
+  function updateCurrentSection() {
+    const scrollTop = container.scrollTop;
+    const sectionHeight = window.innerHeight;
+    const newIndex = Math.round(scrollTop / sectionHeight);
+    
+    if (newIndex !== currentIndex && newIndex >= 0 && newIndex < sections.length) {
+      currentIndex = newIndex;
+      
+      // Update active class
+      sections.forEach((section, i) => {
+        section.classList.toggle('active', i === currentIndex);
+      });
+      
+      // Trigger animations for new section
+      if (typeof triggerSectionAnimations === 'function') {
+        triggerSectionAnimations(currentIndex);
+      }
+      
+      // Update menu
+      if (typeof updateActiveMenuItem === 'function') {
+        updateActiveMenuItem();
+      }
+    }
+  }
+  
+  // Listen to scroll events
+  container.addEventListener('scroll', () => {
+    requestAnimationFrame(updateCurrentSection);
+  });
+  
+  // Initialize
+  updateCurrentSection();
+  
+  // Handle resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      // Scroll to current section
+      const sectionHeight = window.innerHeight;
+      container.scrollTop = currentIndex * sectionHeight;
+    }, 250);
+  });
+  
+  // Keyboard navigation (arrow keys)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      if (currentIndex < sections.length - 1) {
+        currentIndex++;
+        container.scrollTo({
+          top: currentIndex * window.innerHeight,
+          behavior: 'smooth'
+        });
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      if (currentIndex > 0) {
+        currentIndex--;
+        container.scrollTo({
+          top: currentIndex * window.innerHeight,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+})();
+
+// Menu item click handler - scroll to section
+document.querySelectorAll('.menu-item').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    const sectionIndex = parseInt(this.getAttribute('data-section'));
+    const container = document.getElementById('sectionsContainer');
+    
+    if (container && !isNaN(sectionIndex)) {
+      container.scrollTo({
+        top: sectionIndex * window.innerHeight,
+        behavior: 'smooth'
+      });
+      
+      // Close menu
+      const menuOverlay = document.getElementById('menuOverlay');
+      if (menuOverlay) menuOverlay.classList.remove('active');
+    }
+  });
+});
