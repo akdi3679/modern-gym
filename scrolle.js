@@ -195,3 +195,133 @@ document.querySelectorAll('.menu-item:not(#careerLink)').forEach(item => {
     updatePosition();
   });
 });  
+
+// ============================================
+// SCROLL HANDLER - NEVER SKIP SECTIONS
+// ============================================
+(function() {
+  const container = document.getElementById('sectionsContainer');
+  if (!container) return;
+  
+  const sections = Array.from(container.querySelectorAll('section'));
+  let currentIndex = 0;
+  let isLocked = false;
+  let lastScrollTime = 0;
+  const LOCK_DURATION = 1200; // Prevent scrolling for 1.2s after each section change
+  
+  // Function to scroll to a specific section
+  function scrollToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+    if (isLocked) return; // Prevent multiple scrolls
+    
+    // Lock immediately to prevent any other scroll
+    isLocked = true;
+    currentIndex = index;
+    
+    // Calculate position
+    const sectionHeight = window.innerHeight;
+    const offset = index * sectionHeight;
+    
+    // Apply transform
+    container.style.transform = 'translateY(-' + offset + 'px)';
+    
+    // Update active section
+    sections.forEach((section, i) => {
+      if (i === index) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+    
+    // Trigger animations for new section
+    if (typeof triggerSectionAnimations === 'function') {
+      setTimeout(() => triggerSectionAnimations(index), 300);
+    }
+    
+    // Update menu
+    if (typeof updateActiveMenuItem === 'function') {
+      updateActiveMenuItem();
+    }
+    
+    // Release lock after animation completes
+    setTimeout(() => {
+      isLocked = false;
+    }, LOCK_DURATION);
+  }
+  
+  // Wheel event - ANY scroll = ONE section change
+  container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // If locked, ignore completely
+    if (isLocked) return;
+    
+    // Determine direction (doesn't matter how strong the scroll is)
+    const direction = e.deltaY > 0 ? 'down' : 'up';
+    
+    // Move exactly ONE section
+    if (direction === 'down') {
+      scrollToSection(currentIndex + 1);
+    } else {
+      scrollToSection(currentIndex - 1);
+    }
+  }, { passive: false });
+  
+  // Touch events for mobile
+  let touchStartY = 0;
+  let touchStartTime = 0;
+  
+  container.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+    touchStartTime = Date.now();
+  }, { passive: true });
+  
+  container.addEventListener('touchend', (e) => {
+    if (isLocked) return;
+    
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+    const timeDiff = Date.now() - touchStartTime;
+    
+    // Any swipe (fast or slow) = ONE section
+    if (Math.abs(diff) > 30) {
+      if (diff > 0) {
+        scrollToSection(currentIndex + 1);
+      } else {
+        scrollToSection(currentIndex - 1);
+      }
+    }
+  }, { passive: true });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (isLocked) return;
+    
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      scrollToSection(currentIndex + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      scrollToSection(currentIndex - 1);
+    }
+  });
+  
+  // Initialize first section
+  scrollToSection(0);
+  
+  // Handle resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const sectionHeight = window.innerHeight;
+      const offset = currentIndex * sectionHeight;
+      container.style.transform = 'translateY(-' + offset + 'px)';
+    }, 250);
+  });
+  
+  // Expose for menu clicks
+  window.scrollToSection = scrollToSection;
+})();
