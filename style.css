@@ -841,15 +841,16 @@ background: rgba(0, 0, 0, 0.7);
       text-decoration: none;
       display: inline-block;
     }
-/* Add these styles to your existing CSS */
+/* PC scroll container */
 .sections-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh; height: 100dvh;
-  overflow: visible; /* Changed from hidden to visible */
+  height: 100vh;
+  overflow: visible !important;
   position: relative;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* Smoother easing */
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  gap: 0;
 }
 
 .sections-container > section {
@@ -867,9 +868,7 @@ html {
 }
 
 /* Visual indicator for current section */
-.sections-container > section.active {
-  border-top: 2px solid rgba(255, 255, 0, 0.5);
-}
+
     .btn:hover {
       background-color: white;
       color: black;
@@ -5966,4 +5965,46 @@ html {
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* Mobile card animation fix */
+@media (max-width: 768px) {
+  .card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
+  
+  .card-text-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
+  
+  .card-text-section h2,
+  .card-text-section p,
+  .card-text-section .btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
+  
+  /* Force gallery images visible on mobile */
+  .gallery-img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+  }
+  
+  .gallery-text-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .gallery-text-section h2,
+  .gallery-text-section p,
+  .gallery-text-section .btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
 }
