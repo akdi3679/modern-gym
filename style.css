@@ -5487,7 +5487,7 @@ animation: shine 1.5s ease-out forwards;
   width: 100vw;
   position: relative;
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  gap: 150px;
+  gap: 0; /* Removed to prevent black space */
   overflow: hidden;
 }
 
@@ -5523,7 +5523,7 @@ animation: shine 1.5s ease-out forwards;
 /* Mobile responsive */
 @media (max-width: 768px) {
   .sections-container {
-    gap: 80px;
+    gap: 0; /* Removed to prevent black space */
   }
   
   .sections-container > section {

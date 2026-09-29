@@ -919,3 +919,152 @@ document.querySelectorAll('.menu-item').forEach(item => {
     }
   });
 });
+
+// =========================================
+// COMPLETE SCROLL SYSTEM
+// =========================================
+(function() {
+  const container = document.getElementById('sectionsContainer');
+  if (!container) return;
+  
+  const sections = Array.from(container.querySelectorAll('section'));
+  let currentIndex = 0;
+  let isAnimating = false;
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let lastScrollTime = 0;
+  const scrollThreshold = 50;
+  const animationDuration = 800;
+  
+  // Check if current section is scrollable
+  function isSectionScrollable(section) {
+    const content = section.querySelector('.section-content');
+    if (!content) return false;
+    return content.scrollHeight > content.clientHeight + 5;
+  }
+  
+  // Check if section is at top or bottom
+  function isSectionAtEdge(section, direction) {
+    const content = section.querySelector('.section-content');
+    if (!content) return true;
+    
+    if (direction === 'up') {
+      return content.scrollTop <= 1;
+    } else if (direction === 'down') {
+      return content.scrollTop + content.clientHeight >= content.scrollHeight - 2;
+    }
+    return true;
+  }
+  
+  // Scroll to specific section
+  function scrollToSection(index) {
+    if (index < 0 || index >= sections.length || isAnimating) return;
+    
+    isAnimating = true;
+    currentIndex = index;
+    
+    // Calculate exact position (no gaps, so just index * viewport height)
+    const sectionHeight = window.innerHeight;
+    const offset = index * sectionHeight;
+    
+    container.style.transform = 'translateY(-' + offset + 'px)';
+    
+    // Update active section
+    sections.forEach((section, i) => {
+      if (i === index) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+    
+    // Trigger animations for new section
+    if (typeof triggerSectionAnimations === 'function') {
+      triggerSectionAnimations(index);
+    }
+    
+    // Update menu
+    if (typeof updateActiveMenuItem === 'function') {
+      updateActiveMenuItem();
+    }
+    
+    setTimeout(() => {
+      isAnimating = false;
+    }, animationDuration);
+  }
+  
+  // Handle scroll direction
+  function handleScroll(direction) {
+    const now = Date.now();
+    if (now - lastScrollTime < 100) return; // Debounce
+    lastScrollTime = now;
+    
+    const currentSection = sections[currentIndex];
+    const isScrollable = isSectionScrollable(currentSection);
+    
+    if (isScrollable) {
+      // Check if we're at the edge
+      if (direction === 'down' && isSectionAtEdge(currentSection, 'down')) {
+        scrollToSection(currentIndex + 1);
+      } else if (direction === 'up' && isSectionAtEdge(currentSection, 'up')) {
+        scrollToSection(currentIndex - 1);
+      }
+      // Otherwise, let the internal scroll happen naturally
+    } else {
+      // Non-scrollable section, just move to next/prev
+      if (direction === 'down') {
+        scrollToSection(currentIndex + 1);
+      } else if (direction === 'up') {
+        scrollToSection(currentIndex - 1);
+      }
+    }
+  }
+  
+  // Mouse wheel (desktop)
+  container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const direction = e.deltaY > 0 ? 'down' : 'up';
+    handleScroll(direction);
+  }, { passive: false });
+  
+  // Touch events (mobile)
+  container.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  
+  container.addEventListener('touchend', (e) => {
+    touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+    
+    if (Math.abs(diff) > scrollThreshold) {
+      const direction = diff > 0 ? 'down' : 'up';
+      handleScroll(direction);
+    }
+  }, { passive: true });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      handleScroll('down');
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      handleScroll('up');
+    }
+  });
+  
+  // Initialize - scroll to first section
+  scrollToSection(0);
+  
+  // Handle resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      scrollToSection(currentIndex);
+    }, 250);
+  });
+  
+  // Expose for menu clicks
+  window.scrollToSection = scrollToSection;
+})();
